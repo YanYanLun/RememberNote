@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null">
+
+    <TextView
+        android:id="@+id/noData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="没有找到数据！"
+        android:textSize="20dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/view_line_1"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="13dp"
+            android:background="#FF4500"
+            android:visibility="visible" />
+
+        <View
+            android:id="@+id/view_line_2"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="#FFC125"
+            android:visibility="visible" />
+
+        <View
+            android:id="@+id/view_line_3"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="#F4A460"
+            android:visibility="visible" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+</RelativeLayout>

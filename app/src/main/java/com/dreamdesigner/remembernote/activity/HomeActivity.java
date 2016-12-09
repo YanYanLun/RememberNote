@@ -1,0 +1,212 @@
+package com.dreamdesigner.remembernote.activity;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.View;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.dreamdesigner.library.BaseActivity.WriteActivity;
+import com.dreamdesigner.library.Utils.PopupList;
+import com.dreamdesigner.remembernote.R;
+import com.dreamdesigner.remembernote.adapter.RvAdapter;
+import com.dreamdesigner.remembernote.application.NoteAppliction;
+import com.dreamdesigner.remembernote.database.Note;
+import com.dreamdesigner.remembernote.database.NoteDao;
+import com.dreamdesigner.remembernote.database.NoteData;
+import com.dreamdesigner.remembernote.database.NoteMonth;
+import com.dreamdesigner.remembernote.database.NoteYear;
+import com.dreamdesigner.remembernote.dialog.WriteDialog;
+import com.dreamdesigner.remembernote.models.DataModel;
+import com.dreamdesigner.remembernote.models.Level;
+import com.dreamdesigner.remembernote.utils.StaticValueUtils;
+import com.dreamdesigner.remembernote.utils.ViewUtils;
+
+import org.greenrobot.greendao.rx.RxDao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import cn.carbs.android.library.MDDialog;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.functions.Action1;
+
+public class HomeActivity extends WriteActivity {
+    private RecyclerView rv;
+    private WriteDialog mDialog;
+    private RvAdapter rvAdapter;
+    private View view_line_1;
+    private View view_line_2;
+    private View view_line_3;
+    private List<String> popupMenuItemList = new ArrayList<>();
+    private RxDao<Note, Long> noteDao;
+    private PopupList popupList;
+    private RelativeLayout rl_root;
+    private TextView noData;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home);
+        mDialog = new WriteDialog(this);
+        popupMenuItemList.add("删除");
+//        popupMenuItemList.add("修改");
+//        popupMenuItemList.add("更多..");
+        noteDao = NoteAppliction.getInstance().getDaoSession().getNoteDao().rx();
+    }
+
+    @Override
+    protected void onFocusChanged() {
+        rl_root = (RelativeLayout) findViewById(R.id.rl_root);
+        noData = (TextView) findViewById(R.id.noData);
+        rv = (RecyclerView) findViewById(R.id.rv);
+        view_line_1 = findViewById(R.id.view_line_1);
+        view_line_2 = findViewById(R.id.view_line_2);
+        view_line_3 = findViewById(R.id.view_line_3);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        rv.setLayoutManager(linearLayoutManager);
+
+        //view line 1 is handled form xml no need to handle programmatically we are only handling line two and three
+        ViewUtils.handleVerticalLines(findViewById(R.id.view_line_2), findViewById(R.id.view_line_3));
+
+        popupList = new PopupList() {
+            @Override
+            protected void OnNoteLongClick(View view, int position) {
+                Note note = (Note) view.getTag(R.id.rv_item_card);
+                if (note == null)
+                    return;
+                this.showPopupListWindow();
+            }
+
+            @Override
+            protected void OnNoteClick(View view, int position) {
+                Note note = (Note) view.getTag(R.id.rv_item_card);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("Note", note);
+                HomeActivity.this.doActivity(ContentActivity.class, bundle);
+            }
+        };
+
+        popupList.init(this, rv, popupMenuItemList, new PopupList.OnPopupListClickListener() {
+            @Override
+            public void onPopupListClick(View contextView, int contextPosition, int position) {
+                popupList.hidePopupListWindow();
+                final Note note = (Note) contextView.getTag(R.id.rv_item_card);
+                if (position == 0) {
+                    noteDao.deleteByKey(note.getId())
+                            .observeOn(AndroidSchedulers.mainThread())
+                            .subscribe(new Action1<Void>() {
+                                @Override
+                                public void call(Void aVoid) {
+                                    Log.d("DaoExample", "Deleted note, ID: " + note.getId());
+                                    loadNewData();
+                                }
+                            });
+                }
+            }
+        });
+        popupList.setTextSize(popupList.sp2px(12));
+        popupList.setTextPadding(popupList.dp2px(10), popupList.dp2px(10), popupList.dp2px(10), popupList.dp2px(10));
+        popupList.setIndicatorView(popupList.getDefaultIndicatorView(popupList.dp2px(16), popupList.dp2px(8), 0xFF444444));
+
+        rvAdapter = new RvAdapter(this);
+        rv.setAdapter(rvAdapter);
+        loadNewNote();
+    }
+
+    @Override
+    protected void WriteNewNote(View view) {
+        if (mDialog == null)
+            return;
+        mDialog.show();
+    }
+
+    /**
+     * 加载数据
+     */
+    private void loadNewNote() {
+        Reg();
+        loadNewData();
+    }
+
+    private void Reg() {
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(StaticValueUtils.HomeNoteChangeValue);
+        registerReceiver(receiver, filter);
+    }
+
+    private BroadcastReceiver receiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            if (TextUtils.isEmpty(action)) {
+                return;
+            }
+            if (action.equals(StaticValueUtils.HomeNoteChangeValue)) {
+                loadNewData();
+            }
+        }
+    };
+
+    private void loadNewData() {
+        List<NoteYear> noteYearList = NoteData.loadDate();
+        if (noteYearList == null) {
+            isVisible(false);
+            return;
+        }
+        if (noteYearList.size() <= 0) {
+            isVisible(false);
+            return;
+        }
+
+        rvAdapter.data.clear();
+        loadAdapter(noteYearList);
+    }
+
+    private void loadAdapter(List<NoteYear> noteYearList) {
+        for (int i = 0; i < noteYearList.size(); i++) {
+            NoteYear noteYear = noteYearList.get(i);
+            rvAdapter.addItem(new DataModel(Level.LEVEL_ONE, noteYear.Year + "年", null));
+            List<NoteMonth> noteMonthList = noteYear.monthList;
+            if (noteMonthList != null) {
+                for (int j = 0; j < noteMonthList.size(); j++) {
+                    NoteMonth noteMonth = noteMonthList.get(j);
+                    rvAdapter.addItem(new DataModel(Level.LEVEL_TWO, noteMonth.Month + "月", null));
+                    List<Note> list = noteMonth.dayList;
+                    if (list != null) {
+                        for (int s = 0; s < list.size(); s++) {
+                            Note note = list.get(s);
+                            rvAdapter.addItem(new DataModel(Level.LEVEL_THREE, note.getTime() + "  " + note.getTitle(), note));
+                        }
+                    }
+                }
+            }
+        }
+        isVisible(true);
+        rv.getAdapter().notifyDataSetChanged();
+    }
+
+    private void isVisible(boolean bool) {
+        if (bool) {
+            rl_root.setVisibility(View.VISIBLE);
+            noData.setVisibility(View.GONE);
+        } else {
+            noData.setVisibility(View.VISIBLE);
+            rl_root.setVisibility(View.GONE);
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        unregisterReceiver(receiver);
+        super.onDestroy();
+    }
+}
