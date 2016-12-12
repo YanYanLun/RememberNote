@@ -34,9 +34,14 @@ public class WelcomeActivity extends AppCompatActivity {
         root = (RelativeLayout) findViewById(R.id.root);
         preferences = getSharedPreferences("NoteState", 0);
         setStatusBar();
-        if (preferences == null)
+        if (preferences == null) {
+            root.setVisibility(View.VISIBLE);
+            root.setBackground(NoteAppliction.getInstance().getDrawable());
             mHandler.sendEmptyMessageDelayed(1, 2000);
+        }
         if (!preferences.contains("SwithcState")) {
+            root.setVisibility(View.VISIBLE);
+            root.setBackground(NoteAppliction.getInstance().getDrawable());
             mHandler.sendEmptyMessageDelayed(1, 2000);
         }
         boolean bool = preferences.getBoolean("SwithcState", false);
@@ -46,6 +51,7 @@ public class WelcomeActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         } else {
+            root.setVisibility(View.VISIBLE);
             root.setBackground(NoteAppliction.getInstance().getDrawable());
             mHandler.sendEmptyMessageDelayed(1, 2000);
         }
