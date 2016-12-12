@@ -5,15 +5,19 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.dreamdesigner.library.BaseActivity.NoCollapsingActivity;
 import com.dreamdesigner.library.BaseActivity.WriteActivity;
 import com.dreamdesigner.library.Utils.PopupList;
 import com.dreamdesigner.remembernote.R;
@@ -29,6 +33,7 @@ import com.dreamdesigner.remembernote.models.DataModel;
 import com.dreamdesigner.remembernote.models.Level;
 import com.dreamdesigner.remembernote.utils.StaticValueUtils;
 import com.dreamdesigner.remembernote.utils.ViewUtils;
+import com.jaeger.library.StatusBarUtil;
 
 import org.greenrobot.greendao.rx.RxDao;
 
@@ -49,13 +54,17 @@ public class HomeActivity extends WriteActivity {
     private List<String> popupMenuItemList = new ArrayList<>();
     private RxDao<Note, Long> noteDao;
     private PopupList popupList;
-    private RelativeLayout rl_root;
+    private RelativeLayout rl_root, root;
     private TextView noData;
+    private DrawerLayout mDrawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        root = (RelativeLayout) findViewById(R.id.content_home);
+        if (NoteAppliction.getInstance().getDrawable() != null)
+            root.setBackground(NoteAppliction.getInstance().getDrawable());
         mDialog = new WriteDialog(this);
         popupMenuItemList.add("删除");
 //        popupMenuItemList.add("修改");
@@ -71,9 +80,11 @@ public class HomeActivity extends WriteActivity {
         view_line_1 = findViewById(R.id.view_line_1);
         view_line_2 = findViewById(R.id.view_line_2);
         view_line_3 = findViewById(R.id.view_line_3);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rv.setLayoutManager(linearLayoutManager);
 
+        StatusBarUtil.setColorForDrawerLayout(this, mDrawerLayout, getResources().getColor(R.color.colorPrimary), 10);
         //view line 1 is handled form xml no need to handle programmatically we are only handling line two and three
         ViewUtils.handleVerticalLines(findViewById(R.id.view_line_2), findViewById(R.id.view_line_3));
 
@@ -89,6 +100,8 @@ public class HomeActivity extends WriteActivity {
             @Override
             protected void OnNoteClick(View view, int position) {
                 Note note = (Note) view.getTag(R.id.rv_item_card);
+                if (note == null)
+                    return;
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("Note", note);
                 HomeActivity.this.doActivity(ContentActivity.class, bundle);
@@ -208,5 +221,32 @@ public class HomeActivity extends WriteActivity {
     protected void onDestroy() {
         unregisterReceiver(receiver);
         super.onDestroy();
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.nav_manage:
+                doActivity(SettingActivity.class);
+        }
+//        if (id == com.dreamdesigner.library.R.id.nav_camera) {
+//            // Handle the camera action
+//        } else if (id == com.dreamdesigner.library.R.id.nav_gallery) {
+//
+//        } else if (id == com.dreamdesigner.library.R.id.nav_slideshow) {
+//
+//        } else if (id == com.dreamdesigner.library.R.id.nav_manage) {
+//
+//        } else if (id == com.dreamdesigner.library.R.id.nav_share) {
+//
+//        } else if (id == com.dreamdesigner.library.R.id.nav_send) {
+//
+//        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(com.dreamdesigner.library.R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 }

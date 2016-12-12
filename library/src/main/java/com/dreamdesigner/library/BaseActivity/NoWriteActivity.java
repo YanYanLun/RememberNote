@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.dreamdesigner.library.R;
+import com.jaeger.library.StatusBarUtil;
 
 public abstract class NoWriteActivity extends AppCompatActivity {
     /**
@@ -45,6 +46,7 @@ public abstract class NoWriteActivity extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        StatusBarUtil.setColor(this, getResources().getColor(R.color.colorPrimary), 10);
     }
 
     @Override

@@ -1,24 +1,15 @@
 package com.dreamdesigner.remembernote.activity;
 
-import android.content.Intent;
-import android.opengl.Visibility;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.dreamdesigner.library.BaseActivity.NoWriteActivity;
+import com.dreamdesigner.library.BaseActivity.NoCollapsingActivity;
 import com.dreamdesigner.remembernote.R;
 import com.dreamdesigner.remembernote.database.Note;
 
-public class ContentActivity extends NoWriteActivity {
+public class ContentActivity extends NoCollapsingActivity {
     private Note note;
 
     @Override
@@ -39,7 +30,6 @@ public class ContentActivity extends NoWriteActivity {
 
     @Override
     protected void onFocusChanged() {
-        setVisibleFloatingActionButton(View.INVISIBLE);
         if (TextUtils.isEmpty(note.getContent())) {
             getNoteText().setText("暂无内容！");
         } else {
