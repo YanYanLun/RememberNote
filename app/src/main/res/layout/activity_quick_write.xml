@@ -142,7 +142,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="30dp"
                 android:gravity="center"
-                android:text="列表"
+                android:text="查看随记"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16dp" />
         </RelativeLayout>
