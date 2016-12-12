@@ -54,6 +54,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/title0"
                 android:background="@null"
+                android:hint="输入随记标题"
                 android:textColor="#ee333333"
                 android:textCursorDrawable="@drawable/color_cursor"
                 android:textSize="14dp" />
@@ -91,6 +92,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/title1"
                 android:background="@null"
+                android:hint="输入随记内容"
                 android:textColor="#ee333333"
                 android:textCursorDrawable="@drawable/color_cursor"
                 android:textSize="14dp" />
@@ -116,31 +118,33 @@
                 android:layout_width="wrap_content"
                 android:layout_height="52dp"
                 android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
                 android:gravity="center"
                 android:text="确定"
-                android:textSize="16dp"
-                android:layout_marginRight="30dp"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp" />
+
             <TextView
                 android:id="@+id/cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="52dp"
+                android:layout_marginRight="46dp"
                 android:layout_toLeftOf="@+id/enter"
                 android:gravity="center"
                 android:text="取消"
-                android:textSize="16dp"
-                android:layout_marginRight="46dp"
-                android:textColor="#33333333" />
+                android:textColor="#33333333"
+                android:textSize="16dp" />
+
             <TextView
                 android:id="@+id/menu"
                 android:layout_width="wrap_content"
                 android:layout_height="52dp"
                 android:layout_alignParentLeft="true"
+                android:layout_marginLeft="30dp"
                 android:gravity="center"
                 android:text="列表"
-                android:textSize="16dp"
-                android:layout_marginLeft="30dp"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp" />
         </RelativeLayout>
     </LinearLayout>
 </RelativeLayout>
