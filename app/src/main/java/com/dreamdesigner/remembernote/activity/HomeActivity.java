@@ -15,16 +15,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.dreamdesigner.library.BaseActivity.NoCollapsingActivity;
 import com.dreamdesigner.library.BaseActivity.WriteActivity;
 import com.dreamdesigner.library.Utils.PopupList;
 import com.dreamdesigner.remembernote.R;
 import com.dreamdesigner.remembernote.adapter.RvAdapter;
 import com.dreamdesigner.remembernote.application.NoteAppliction;
 import com.dreamdesigner.remembernote.database.Note;
-import com.dreamdesigner.remembernote.database.NoteDao;
 import com.dreamdesigner.remembernote.database.NoteData;
 import com.dreamdesigner.remembernote.database.NoteMonth;
 import com.dreamdesigner.remembernote.database.NoteYear;
@@ -40,7 +37,6 @@ import org.greenrobot.greendao.rx.RxDao;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.carbs.android.library.MDDialog;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 
@@ -230,6 +226,10 @@ public class HomeActivity extends WriteActivity {
         switch (id) {
             case R.id.nav_manage:
                 doActivity(SettingActivity.class);
+                break;
+            case R.id.nav_send:
+                doActivity(AboutActivity.class);
+                break;
         }
 //        if (id == com.dreamdesigner.library.R.id.nav_camera) {
 //            // Handle the camera action

@@ -38,11 +38,13 @@ public class WelcomeActivity extends AppCompatActivity {
             root.setVisibility(View.VISIBLE);
             root.setBackground(NoteAppliction.getInstance().getDrawable());
             mHandler.sendEmptyMessageDelayed(1, 2000);
+            return;
         }
         if (!preferences.contains("SwithcState")) {
             root.setVisibility(View.VISIBLE);
             root.setBackground(NoteAppliction.getInstance().getDrawable());
             mHandler.sendEmptyMessageDelayed(1, 2000);
+            return;
         }
         boolean bool = preferences.getBoolean("SwithcState", false);
         if (bool) {

@@ -1,27 +1,25 @@
 package com.dreamdesigner.remembernote.activity;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.dreamdesigner.library.Utils.DisplayUtil;
 import com.dreamdesigner.remembernote.R;
 import com.dreamdesigner.remembernote.application.NoteAppliction;
 import com.dreamdesigner.remembernote.database.Note;
 import com.dreamdesigner.remembernote.database.NoteDao;
-import com.dreamdesigner.remembernote.dialog.WriteDialog;
-import com.dreamdesigner.remembernote.utils.StaticValueUtils;
 import com.jaeger.library.StatusBarUtil;
+
+import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEvent;
+import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEventListener;
 
 import java.util.Calendar;
 
@@ -29,9 +27,10 @@ import java.util.Calendar;
  * Created by XIANG on 2016/12/12.
  */
 
-public class QuickNoteActivity extends AppCompatActivity implements View.OnClickListener {
+public class QuickNoteActivity extends AppCompatActivity implements View.OnClickListener{
     private EditText et, et1;
     private NoteDao noteDao;
+    private LinearLayout quick_write;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,12 +44,34 @@ public class QuickNoteActivity extends AppCompatActivity implements View.OnClick
     private void load() {
         et = (EditText) this.findViewById(R.id.edit0);
         et1 = (EditText) this.findViewById(R.id.edit1);
+        quick_write = (LinearLayout) findViewById(R.id.quick_write);
         TextView enter = (TextView) findViewById(R.id.enter);
         TextView cancel = (TextView) findViewById(R.id.cancel);
         TextView menu = (TextView) findViewById(R.id.menu);
         enter.setOnClickListener(this);
         cancel.setOnClickListener(this);
         menu.setOnClickListener(this);
+
+        KeyboardVisibilityEvent.setEventListener(this, new KeyboardVisibilityEventListener() {
+            @Override
+            public void onVisibilityChanged(boolean isOpen) {
+                if (isOpen) {//键盘弹出时
+                    RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+                    params.addRule(RelativeLayout.CENTER_HORIZONTAL);
+                    params.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+                    params.topMargin = DisplayUtil.dip2px(QuickNoteActivity.this, 40);
+                    params.leftMargin = DisplayUtil.dip2px(QuickNoteActivity.this, 20);
+                    params.rightMargin = DisplayUtil.dip2px(QuickNoteActivity.this, 20);
+                    quick_write.setLayoutParams(params);
+                } else { //键盘隐藏时
+                    RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+                    params.addRule(RelativeLayout.CENTER_IN_PARENT);
+                    params.leftMargin = DisplayUtil.dip2px(QuickNoteActivity.this, 20);
+                    params.rightMargin = DisplayUtil.dip2px(QuickNoteActivity.this, 20);
+                    quick_write.setLayoutParams(params);
+                }
+            }
+        });
     }
 
     @Override

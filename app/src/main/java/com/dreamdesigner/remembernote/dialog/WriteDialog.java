@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.dreamdesigner.dialoglibrary.MDDialog;
 import com.dreamdesigner.remembernote.R;
 import com.dreamdesigner.remembernote.application.NoteAppliction;
 import com.dreamdesigner.remembernote.database.Note;
@@ -18,7 +19,6 @@ import org.w3c.dom.Text;
 import java.util.Calendar;
 import java.util.Date;
 
-import cn.carbs.android.library.MDDialog;
 
 /**
  * Created by XIANG on 2016/11/22.
@@ -28,6 +28,7 @@ public class WriteDialog {
     private Context mContext;
     private MDDialog.Builder mdDialog;
     private NoteDao noteDao;
+    private MDDialog mMDDialog;
 
     public WriteDialog(Context context) {
         super();
@@ -53,18 +54,20 @@ public class WriteDialog {
                 .setNegativeButton(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        mMDDialog.dismiss();
                     }
                 })
                 .setPositiveButton(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
+                        //确定第一步
                     }
                 })
                 .setPositiveButtonMultiListener(new MDDialog.OnMultiClickListener() {
 
                     @Override
                     public void onClick(View clickedView, View contentView) {
+                        //确定第二步
                         EditText et = (EditText) contentView.findViewById(R.id.edit0);
                         EditText et1 = (EditText) contentView.findViewById(R.id.edit1);
                         String title = et.getText().toString().trim();
@@ -89,25 +92,23 @@ public class WriteDialog {
                         note.setYear(year);
                         note.setMonth(month);
                         note.setDay(day);
-//                        note.setId(Long.parseLong(year + month + day + hour + minute + c.get(Calendar.SECOND) + ""));
                         note.setTime(year + "-" + month + "-" + day + " " + hour + ":" + minute);
                         long status = noteDao.insert(note);
                         if (status > 0) {
-//                            Toast.makeText(mContext, "新增数据成功", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent();
                             intent.setAction(StaticValueUtils.HomeNoteChangeValue);
                             mContext.sendBroadcast(intent);
                         } else {
                             Toast.makeText(mContext, "新增数据失败", Toast.LENGTH_SHORT).show();
                         }
-
+                        mMDDialog.dismiss();
                     }
                 })
                 .setNegativeButtonMultiListener(new MDDialog.OnMultiClickListener() {
 
                     @Override
                     public void onClick(View clickedView, View contentView) {
-
+                        mMDDialog.dismiss();
                     }
                 })
                 .setOnItemClickListener(new MDDialog.OnItemClickListener() {
@@ -125,7 +126,7 @@ public class WriteDialog {
                 .setWidthMaxDp(600)
 //                      .setShowTitle(false)
                 .setShowButtons(true)
-                .create()
-                .show();
+                .create();
+        mMDDialog = mdDialog.show();
     }
 }

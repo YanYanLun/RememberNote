@@ -25,7 +25,7 @@ public class SettingActivity extends NoCollapsingActivity {
 
     @Override
     protected void onFocusChanged() {
-        setTitle("设置");
+        setTitle("随记设置");
         preferences = getSharedPreferences("NoteState", 0);
         switchButton = (FunSwitch) findViewById(R.id.switchButton);
         switchButton.setState(preferences.getBoolean("SwithcState", false));
