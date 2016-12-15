@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">记.随记</string>
+    <string name="navigation_drawer_open">打开导航抽屉</string>
+    <string name="navigation_drawer_close">关闭导航抽屉</string>
+    <string name="title_activity_content">ContentActivity</string>
+    <string name="title_activity_setting">记.随记</string>
+
+    <string name="no_data">没有找到数据！</string>
+
+    <string name="action_settings">随记设置</string>
+    <string name="action_about">关于</string>
+    <string name="action_year">年</string>
+    <string name="action_month">月</string>
+    <string name="action_add">新增</string>
+    <string name="action_delete">老大哥</string>
+    <string name="action_quick_note">快速随记</string>
+
+    <string name="dialog_title">新随记</string>
+    <string name="dialog_hint_title">输入随记标题</string>
+    <string name="dialog_hint_content">输入随记内容</string>
+    <string name="dialog_note_title">随记标题︰</string>
+    <string name="dialog_note_content">随记内容︰</string>
+
+    <string name="prompt_dialog_content">请输入随记内容</string>
+    <string name="prompt_dialog_title">请输入随记标题</string>
+    <string name="prompt_new_note_fail">随记保存失败</string>
+    <string name="prompt_new_note_success">新随记已保存</string>
+    <string name="prompt_enter">确定</string>
+    <string name="prompt_cancel">取消</string>
+    <string name="prompt_look_note">查看随记</string>
+    <string name="prompt_exit_note">再按一次退出程序</string>
+
+
+</resources>

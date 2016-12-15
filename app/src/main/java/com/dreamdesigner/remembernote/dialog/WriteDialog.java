@@ -44,13 +44,13 @@ public class WriteDialog {
                     @Override
                     public void operate(View contentView) {
                         EditText et = (EditText) contentView.findViewById(R.id.edit0);
-                        et.setHint("输入随记标题");
+                        et.setHint(mContext.getString(R.string.dialog_hint_title));
                         EditText et1 = (EditText) contentView.findViewById(R.id.edit1);
-                        et1.setHint("输入随记内容");
+                        et1.setHint(mContext.getString(R.string.dialog_hint_content));
                     }
                 })
 //                      .setMessages(messages)
-                .setTitle("新随记")
+                .setTitle(mContext.getString(R.string.dialog_title))
                 .setNegativeButton(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -73,11 +73,11 @@ public class WriteDialog {
                         String title = et.getText().toString().trim();
                         String content = et1.getText().toString().trim();
                         if (TextUtils.isEmpty(title)) {
-                            Toast.makeText(mContext, "请输入随记标题", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(mContext, mContext.getString(R.string.prompt_dialog_title), Toast.LENGTH_SHORT).show();
                             return;
                         }
                         if (TextUtils.isEmpty(content)) {
-                            Toast.makeText(mContext, "请输入随记内容", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(mContext, mContext.getString(R.string.prompt_dialog_content), Toast.LENGTH_SHORT).show();
                             return;
                         }
                         Note note = new Note();
@@ -99,7 +99,7 @@ public class WriteDialog {
                             intent.setAction(StaticValueUtils.HomeNoteChangeValue);
                             mContext.sendBroadcast(intent);
                         } else {
-                            Toast.makeText(mContext, "新增数据失败", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(mContext, mContext.getString(R.string.prompt_new_note_fail), Toast.LENGTH_SHORT).show();
                         }
                         mMDDialog.dismiss();
                     }

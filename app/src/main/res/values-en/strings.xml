@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">RememberNote</string>
+	<string name="navigation_drawer_open">Open navigation drawer</string>
+	<string name="navigation_drawer_close">Close navigation drawer</string>
+	<string name="title_activity_content">ContentActivity</string>
+	<string name="title_activity_setting">RememberNote</string>
+	<string name="no_data">No data found！</string>
+	<string name="action_settings">Setting</string>
+	<string name="action_about">About</string>
+	<string name="action_year">year</string>
+	<string name="action_month">month</string>
+	<string name="action_add">New</string>
+	<string name="action_delete">Delete</string>
+	<string name="action_quick_note">Quick notes</string>
+	<string name="dialog_title">New note</string>
+	<string name="dialog_hint_title">Enter the following header</string>
+	<string name="dialog_hint_content">Enter the contents of the following</string>
+	<string name="dialog_note_title">Title：</string>
+	<string name="dialog_note_content">Content：</string>
+	<string name="prompt_dialog_content">Please enter the contents of the following</string>
+	<string name="prompt_dialog_title">Please enter a caption</string>
+	<string name="prompt_new_note_fail">Save failed</string>
+	<string name="prompt_new_note_success">The new records have been saved</string>
+	<string name="prompt_enter">Done</string>
+	<string name="prompt_cancel">Cancel</string>
+	<string name="prompt_look_note">CheckNote</string>
+	<string name="prompt_exit_note">Then click one exit RememberNote</string>
+
+</resources>

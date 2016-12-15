@@ -27,7 +27,7 @@ import java.util.Calendar;
  * Created by XIANG on 2016/12/12.
  */
 
-public class QuickNoteActivity extends AppCompatActivity implements View.OnClickListener{
+public class QuickNoteActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText et, et1;
     private NoteDao noteDao;
     private LinearLayout quick_write;
@@ -96,11 +96,11 @@ public class QuickNoteActivity extends AppCompatActivity implements View.OnClick
         String title = et.getText().toString().trim();
         String content = et1.getText().toString().trim();
         if (TextUtils.isEmpty(title)) {
-            Toast.makeText(this, "请输入随记标题", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.dialog_hint_title), Toast.LENGTH_SHORT).show();
             return;
         }
         if (TextUtils.isEmpty(content)) {
-            Toast.makeText(this, "请输入随记内容", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.dialog_hint_content), Toast.LENGTH_SHORT).show();
             return;
         }
         Note note = new Note();
@@ -118,11 +118,11 @@ public class QuickNoteActivity extends AppCompatActivity implements View.OnClick
         note.setTime(year + "-" + month + "-" + day + " " + hour + ":" + minute);
         long status = noteDao.insert(note);
         if (status > 0) {
-            Toast.makeText(this, "新随记已保存", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.prompt_new_note_success), Toast.LENGTH_SHORT).show();
             et.setText("");
             et1.setText("");
         } else {
-            Toast.makeText(this, "随记保存失败", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.prompt_new_note_fail), Toast.LENGTH_SHORT).show();
         }
     }
 

@@ -439,7 +439,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="eb3a56811c4c3bde72c6827ad1e4b592173905a8">
+        sha1="904dffa762480947c56a7d90e2fb43010709c1e1">
         <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_16788d1e570eb18b059c1f11dd2d25580467744e\classes.dex" />
     </item>
     <item
@@ -457,7 +457,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="50158fa2ad19a41f588976d9a4c98f827c67f453">
+        sha1="6c13a46c410685cef17d38fa72420263ca9a23a9">
         <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_6aeac312226455b4a2a9f897f225aa090693b04e\classes.dex" />
     </item>
     <item
@@ -525,21 +525,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\net.yslibrary.keyboardvisibilityevent\keyboardvisibilityevent\2.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="6d237cd9c1626fbf68827947987660ec2c935fbb">
-        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\net.yslibrary.keyboardvisibilityevent-keyboardvisibilityevent-2.0.0_4032836df0cd030ca05a0f1e340278ceb7635afb\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
         <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-8.4.0_f82dc34408d63d98dbe12f83fb702c4c83a7a338\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\net.yslibrary.keyboardvisibilityevent\keyboardvisibilityevent\2.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="6d237cd9c1626fbf68827947987660ec2c935fbb">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\net.yslibrary.keyboardvisibilityevent-keyboardvisibilityevent-2.0.0_4032836df0cd030ca05a0f1e340278ceb7635afb\classes.dex" />
     </item>
     <item
         is-multidex="false"

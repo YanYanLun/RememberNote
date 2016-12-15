@@ -13,11 +13,11 @@
 
         <TextView
             android:id="@+id/title0"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
-            android:gravity="center"
-            android:text="随记标题："
+            android:gravity="right|center_vertical"
+            android:text="@string/dialog_note_title"
             android:textColor="#bb333333" />
 
         <EditText
@@ -50,11 +50,11 @@
 
         <TextView
             android:id="@+id/title1"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
-            android:gravity="center"
-            android:text="随记内容："
+            android:gravity="right|center_vertical"
+            android:text="@string/dialog_note_content"
             android:textColor="#bb333333" />
 
         <EditText

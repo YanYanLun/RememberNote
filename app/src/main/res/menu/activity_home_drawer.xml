@@ -17,11 +17,11 @@
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
-            android:title="随记设置" />
+            android:title="@string/action_settings" />
         <item
             android:id="@+id/nav_send"
             android:icon="@drawable/ic_menu_send"
-            android:title="关于" />
+            android:title="@string/action_about" />
     </group>
 
     <!--<item android:title="互动">

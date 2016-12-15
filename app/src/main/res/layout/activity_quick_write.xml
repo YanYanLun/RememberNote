@@ -19,7 +19,7 @@
             android:layout_height="60dp"
             android:gravity="center_vertical"
             android:paddingLeft="16dp"
-            android:text="新随记"
+            android:text="@string/dialog_title"
             android:textColor="@color/colorPrimary"
             android:textSize="20dp" />
 
@@ -40,11 +40,11 @@
 
             <TextView
                 android:id="@+id/title0"
-                android:layout_width="wrap_content"
+                android:layout_width="70dp"
                 android:layout_height="48dp"
                 android:layout_alignParentLeft="true"
-                android:gravity="center"
-                android:text="随记标题："
+                android:gravity="right|center_vertical"
+                android:text="@string/dialog_note_title"
                 android:textColor="#bb333333" />
 
             <EditText
@@ -54,7 +54,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/title0"
                 android:background="@null"
-                android:hint="输入随记标题"
+                android:hint="@string/prompt_dialog_title"
                 android:textColor="#ee333333"
                 android:textCursorDrawable="@drawable/color_cursor"
                 android:textSize="14dp" />
@@ -78,11 +78,11 @@
 
             <TextView
                 android:id="@+id/title1"
-                android:layout_width="wrap_content"
+                android:layout_width="70dp"
                 android:layout_height="48dp"
                 android:layout_alignParentLeft="true"
-                android:gravity="center"
-                android:text="随记内容："
+                android:gravity="right|center_vertical"
+                android:text="@string/dialog_note_content"
                 android:textColor="#bb333333" />
 
             <EditText
@@ -92,7 +92,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/title1"
                 android:background="@null"
-                android:hint="输入随记内容"
+                android:hint="@string/prompt_dialog_content"
                 android:textColor="#ee333333"
                 android:textCursorDrawable="@drawable/color_cursor"
                 android:textSize="14dp" />
@@ -120,7 +120,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="30dp"
                 android:gravity="center"
-                android:text="确定"
+                android:text="@string/prompt_enter"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16dp" />
 
@@ -131,7 +131,7 @@
                 android:layout_marginRight="46dp"
                 android:layout_toLeftOf="@+id/enter"
                 android:gravity="center"
-                android:text="取消"
+                android:text="@string/prompt_cancel"
                 android:textColor="#33333333"
                 android:textSize="16dp" />
 
@@ -142,7 +142,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="30dp"
                 android:gravity="center"
-                android:text="查看随记"
+                android:text="@string/prompt_look_note"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16dp" />
         </RelativeLayout>

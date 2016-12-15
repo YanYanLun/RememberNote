@@ -9,6 +9,6 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="没有找到数据！"
+        android:text="@string/no_data"
         android:textSize="20dp" />
 </RelativeLayout>

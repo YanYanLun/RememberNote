@@ -11,10 +11,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.dreamdesigner.library.BaseActivity.WriteActivity;
 import com.dreamdesigner.library.Utils.PopupList;
@@ -36,6 +38,8 @@ import org.greenrobot.greendao.rx.RxDao;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
@@ -62,10 +66,18 @@ public class HomeActivity extends WriteActivity {
         if (NoteAppliction.getInstance().getDrawable() != null)
             root.setBackground(NoteAppliction.getInstance().getDrawable());
         mDialog = new WriteDialog(this);
-        popupMenuItemList.add("删除");
+        popupMenuItemList.add(getString(R.string.action_delete));
 //        popupMenuItemList.add("修改");
 //        popupMenuItemList.add("更多..");
         noteDao = NoteAppliction.getInstance().getDaoSession().getNoteDao().rx();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            exitBy2Click(); // 调用双击退出函数
+        }
+        return false;
     }
 
     @Override
@@ -183,12 +195,12 @@ public class HomeActivity extends WriteActivity {
     private void loadAdapter(List<NoteYear> noteYearList) {
         for (int i = 0; i < noteYearList.size(); i++) {
             NoteYear noteYear = noteYearList.get(i);
-            rvAdapter.addItem(new DataModel(Level.LEVEL_ONE, noteYear.Year + "年", null));
+            rvAdapter.addItem(new DataModel(Level.LEVEL_ONE, noteYear.Year + getString(R.string.action_year), null));
             List<NoteMonth> noteMonthList = noteYear.monthList;
             if (noteMonthList != null) {
                 for (int j = 0; j < noteMonthList.size(); j++) {
                     NoteMonth noteMonth = noteMonthList.get(j);
-                    rvAdapter.addItem(new DataModel(Level.LEVEL_TWO, noteMonth.Month + "月", null));
+                    rvAdapter.addItem(new DataModel(Level.LEVEL_TWO, noteMonth.Month + getString(R.string.action_month), null));
                     List<Note> list = noteMonth.dayList;
                     if (list != null) {
                         for (int s = 0; s < list.size(); s++) {
@@ -215,7 +227,8 @@ public class HomeActivity extends WriteActivity {
 
     @Override
     protected void onDestroy() {
-        unregisterReceiver(receiver);
+        if (receiver != null)
+            unregisterReceiver(receiver);
         super.onDestroy();
     }
 
@@ -248,5 +261,30 @@ public class HomeActivity extends WriteActivity {
         DrawerLayout drawer = (DrawerLayout) findViewById(com.dreamdesigner.library.R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    /**
+     * 双击退出函数
+     */
+    private static Boolean isExit = false;
+
+    private void exitBy2Click() {
+        Timer tExit = null;
+        if (isExit == false) {
+            isExit = true; // 准备退出
+            Toast.makeText(this, getString(R.string.prompt_exit_note), Toast.LENGTH_SHORT).show();
+            tExit = new Timer();
+            tExit.schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    isExit = false; // 取消退出
+                }
+            }, 2000); // 如果2秒钟内没有按下返回键，则启动定时器取消掉刚才执行的任务
+
+        } else {
+            finish();
+            // System.exit(0);
+            android.os.Process.killProcess(android.os.Process.myPid());
+        }
     }
 }
