@@ -1,6 +1,7 @@
 package com.dreamdesigner.remembernote.application;
 
 import android.app.Application;
+import android.content.BroadcastReceiver;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
@@ -10,8 +11,12 @@ import com.dreamdesigner.library.Utils.FastBlurUtil;
 import com.dreamdesigner.remembernote.R;
 import com.dreamdesigner.remembernote.database.DaoMaster;
 import com.dreamdesigner.remembernote.database.DaoSession;
+import com.dreamdesigner.remembernote.utils.ExitApplictionUtils;
 
 import org.greenrobot.greendao.database.Database;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by XIANG on 2016/11/22.
@@ -26,11 +31,13 @@ public class NoteAppliction extends Application {
     public static final boolean ENCRYPTED = true;
     public static Bitmap blurBitmap;
     private Drawable drawable;
+    private List<BroadcastReceiver> receivers;
 
     @Override
     public void onCreate() {
         super.onCreate();
         instance = this;
+        ExitApplictionUtils.isExit = false;
     }
 
     public static NoteAppliction getInstance() {
@@ -75,5 +82,11 @@ public class NoteAppliction extends Application {
         } catch (Exception e) {
             return null;
         }
+    }
+
+    public synchronized List<BroadcastReceiver> getReceivers() {
+        if (receivers == null)
+            receivers = new ArrayList<>();
+        return receivers;
     }
 }

@@ -256,7 +256,7 @@ public class NoteDao extends AbstractDao<Note, Long> {
 
     @Override
     public List<Note> loadAll() {
-        Cursor cursor = db.rawQuery("SELECT * FROM " + NoteDao.TABLENAME + " ORDER BY ID DESC", null);
+        Cursor cursor = db.rawQuery("SELECT * FROM " + NoteDao.TABLENAME + " ORDER BY TIME DESC", null);
         return loadAllAndCloseCursor(cursor);
     }
 }

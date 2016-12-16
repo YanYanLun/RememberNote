@@ -11,9 +11,10 @@
     <string name="action_about">关于</string>
     <string name="action_year">年</string>
     <string name="action_month">月</string>
+    <string name="action_quick_note">快速随记</string>
+    <string name="action_update">更新随记</string>
     <string name="action_add">新增</string>
     <string name="action_delete">删除</string>
-    <string name="action_quick_note">快速随记</string>
 
     <string name="dialog_title">新随记</string>
     <string name="dialog_hint_title">输入随记标题</string>
@@ -29,4 +30,10 @@
     <string name="prompt_cancel">取消</string>
     <string name="prompt_look_note">查看随记</string>
     <string name="prompt_exit_note">再按一次退出程序</string>
+
+    <string-array name="action_items">
+        <item name="action_add">新增</item>
+        <item name="action_update">更新</item>
+        <item name="action_delete">删除</item>
+    </string-array>
 </resources>

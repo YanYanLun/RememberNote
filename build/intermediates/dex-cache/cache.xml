@@ -443,6 +443,15 @@
         <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_16788d1e570eb18b059c1f11dd2d25580467744e\classes.dex" />
     </item>
     <item
+        is-multidex="true"
+        jar="C:\Works\RememberNote\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7a6a57eda8d390f7bf4a75058ac9614474acc9ea">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_6aeac312226455b4a2a9f897f225aa090693b04e\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.jakewharton.rxbinding\rxbinding\0.4.0\jars\classes.jar"
         jumboMode="false"
@@ -450,15 +459,6 @@
         revision="24.0.3"
         sha1="ffc09f4e5bdebe068e5101f587dadc42b60fbfe4">
         <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\com.jakewharton.rxbinding-rxbinding-0.4.0_6a36b7775cc04035851d507e5d45a4f2a5919808.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Works\RememberNote\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="6c13a46c410685cef17d38fa72420263ca9a23a9">
-        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_6aeac312226455b4a2a9f897f225aa090693b04e\classes.dex" />
     </item>
     <item
         is-multidex="false"

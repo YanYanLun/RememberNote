@@ -30,6 +30,7 @@ import com.dreamdesigner.remembernote.database.NoteYear;
 import com.dreamdesigner.remembernote.dialog.WriteDialog;
 import com.dreamdesigner.remembernote.models.DataModel;
 import com.dreamdesigner.remembernote.models.Level;
+import com.dreamdesigner.remembernote.utils.ExitApplictionUtils;
 import com.dreamdesigner.remembernote.utils.StaticValueUtils;
 import com.dreamdesigner.remembernote.utils.ViewUtils;
 import com.jaeger.library.StatusBarUtil;
@@ -66,16 +67,17 @@ public class HomeActivity extends WriteActivity {
         if (NoteAppliction.getInstance().getDrawable() != null)
             root.setBackground(NoteAppliction.getInstance().getDrawable());
         mDialog = new WriteDialog(this);
-        popupMenuItemList.add(getString(R.string.action_delete));
-//        popupMenuItemList.add("修改");
-//        popupMenuItemList.add("更多..");
+        String[] items = getResources().getStringArray(R.array.action_items);
+        for (String item : items) {
+            popupMenuItemList.add(item);
+        }
         noteDao = NoteAppliction.getInstance().getDaoSession().getNoteDao().rx();
     }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            exitBy2Click(); // 调用双击退出函数
+            new ExitApplictionUtils(HomeActivity.this).exitBy2Click(); // 调用双击退出函数
         }
         return false;
     }
@@ -121,16 +123,27 @@ public class HomeActivity extends WriteActivity {
             public void onPopupListClick(View contextView, int contextPosition, int position) {
                 popupList.hidePopupListWindow();
                 final Note note = (Note) contextView.getTag(R.id.rv_item_card);
-                if (position == 0) {
-                    noteDao.deleteByKey(note.getId())
-                            .observeOn(AndroidSchedulers.mainThread())
-                            .subscribe(new Action1<Void>() {
-                                @Override
-                                public void call(Void aVoid) {
-                                    Log.d("DaoExample", "Deleted note, ID: " + note.getId());
-                                    loadNewData();
-                                }
-                            });
+                if (note == null)
+                    return;
+                switch (position) {
+                    case 0:
+                        mDialog.show();
+                        break;
+                    case 1:
+                        mDialog.setNotes(note);
+                        mDialog.show();
+                        break;
+                    case 2:
+                        noteDao.deleteByKey(note.getId())
+                                .observeOn(AndroidSchedulers.mainThread())
+                                .subscribe(new Action1<Void>() {
+                                    @Override
+                                    public void call(Void aVoid) {
+                                        Log.d("DaoExample", "Deleted note, ID: " + note.getId());
+                                        loadNewData();
+                                    }
+                                });
+                        break;
                 }
             }
         });
@@ -156,6 +169,12 @@ public class HomeActivity extends WriteActivity {
     private void loadNewNote() {
         Reg();
         loadNewData();
+    }
+
+    @Override
+    public Intent registerReceiver(BroadcastReceiver receiver, IntentFilter filter) {
+        NoteAppliction.getInstance().getReceivers().add(receiver);
+        return super.registerReceiver(receiver, filter);
     }
 
     private void Reg() {
@@ -195,12 +214,12 @@ public class HomeActivity extends WriteActivity {
     private void loadAdapter(List<NoteYear> noteYearList) {
         for (int i = 0; i < noteYearList.size(); i++) {
             NoteYear noteYear = noteYearList.get(i);
-            rvAdapter.addItem(new DataModel(Level.LEVEL_ONE, noteYear.Year + getString(R.string.action_year), null));
+            rvAdapter.addItem(new DataModel(Level.LEVEL_ONE, noteYear.Year + " " + getString(R.string.action_year), null));
             List<NoteMonth> noteMonthList = noteYear.monthList;
             if (noteMonthList != null) {
                 for (int j = 0; j < noteMonthList.size(); j++) {
                     NoteMonth noteMonth = noteMonthList.get(j);
-                    rvAdapter.addItem(new DataModel(Level.LEVEL_TWO, noteMonth.Month + getString(R.string.action_month), null));
+                    rvAdapter.addItem(new DataModel(Level.LEVEL_TWO, noteMonth.Month + " " + getString(R.string.action_month), null));
                     List<Note> list = noteMonth.dayList;
                     if (list != null) {
                         for (int s = 0; s < list.size(); s++) {
@@ -227,8 +246,10 @@ public class HomeActivity extends WriteActivity {
 
     @Override
     protected void onDestroy() {
-        if (receiver != null)
-            unregisterReceiver(receiver);
+        if (NoteAppliction.getInstance().getReceivers() != null)
+            for (BroadcastReceiver item : NoteAppliction.getInstance().getReceivers()) {
+                unregisterReceiver(item);
+            }
         super.onDestroy();
     }
 
@@ -263,28 +284,4 @@ public class HomeActivity extends WriteActivity {
         return true;
     }
 
-    /**
-     * 双击退出函数
-     */
-    private static Boolean isExit = false;
-
-    private void exitBy2Click() {
-        Timer tExit = null;
-        if (isExit == false) {
-            isExit = true; // 准备退出
-            Toast.makeText(this, getString(R.string.prompt_exit_note), Toast.LENGTH_SHORT).show();
-            tExit = new Timer();
-            tExit.schedule(new TimerTask() {
-                @Override
-                public void run() {
-                    isExit = false; // 取消退出
-                }
-            }, 2000); // 如果2秒钟内没有按下返回键，则启动定时器取消掉刚才执行的任务
-
-        } else {
-            finish();
-            // System.exit(0);
-            android.os.Process.killProcess(android.os.Process.myPid());
-        }
-    }
 }
