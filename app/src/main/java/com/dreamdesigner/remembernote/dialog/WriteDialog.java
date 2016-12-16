@@ -43,11 +43,12 @@ public class WriteDialog {
         this.mNote = notes;
     }
 
+    public void updateShow() {
+        HaveNotes();
+    }
+
     public void show() {
-        if (mNote == null)
-            NohaveNotes();
-        else
-            HaveNotes();
+        NohaveNotes();
     }
 
     private void HaveNotes() {

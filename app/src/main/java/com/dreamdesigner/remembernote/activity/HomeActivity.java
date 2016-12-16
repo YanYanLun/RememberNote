@@ -131,7 +131,7 @@ public class HomeActivity extends WriteActivity {
                         break;
                     case 1:
                         mDialog.setNotes(note);
-                        mDialog.show();
+                        mDialog.updateShow();
                         break;
                     case 2:
                         noteDao.deleteByKey(note.getId())

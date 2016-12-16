@@ -10,29 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f07ec37-48c0-45df-aae2-0cc6608ce45f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/dreamdesigner/remembernote/utils/ExitApplictionutils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileReleaseJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileReleaseJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/dreamdesigner/remembernote/activity/HomeActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/dreamdesigner/remembernote/activity/HomeActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/dreamdesigner/remembernote/application/NoteAppliction.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/dreamdesigner/remembernote/application/NoteAppliction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/dreamdesigner/remembernote/database/NoteDao.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/dreamdesigner/remembernote/database/NoteDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/dreamdesigner/remembernote/dialog/WriteDialog.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/dreamdesigner/remembernote/dialog/WriteDialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-zh-rCN/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-zh-rCN/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialoglibrary/dialoglibrary.iml" afterPath="$PROJECT_DIR$/dialoglibrary/dialoglibrary.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/library.iml" afterPath="$PROJECT_DIR$/library/library.iml" />
     </list>
     <ignored path="RememberNote.iws" />
@@ -91,13 +80,13 @@
       <file leaf-file-name="HomeActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dreamdesigner/remembernote/activity/HomeActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="250" column="0" selection-start-line="250" selection-start-column="0" selection-end-line="250" selection-end-column="0" />
+            <state relative-caret-position="343">
+              <caret line="133" column="45" selection-start-line="133" selection-start-column="45" selection-end-line="133" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5751#6110#0" expanded="true" />
-                <element signature="e#6109#6110#0" expanded="true" />
-                <element signature="e#8651#8683#0" expanded="true" />
+                <element signature="e#5757#6116#0" expanded="true" />
+                <element signature="e#6115#6116#0" expanded="true" />
+                <element signature="e#8657#8689#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,8 +105,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            <state relative-caret-position="270">
+              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -136,24 +125,28 @@
       <file leaf-file-name="WriteDialog.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dreamdesigner/remembernote/dialog/WriteDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="71" column="46" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
+            <state relative-caret-position="725">
+              <caret line="45" column="26" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1166#1167#0" expanded="true" />
                 <element signature="e#1200#1201#0" expanded="true" />
-                <element signature="e#1844#1890#0" expanded="true" />
-                <element signature="e#2175#2223#0" expanded="true" />
-                <element signature="e#2430#2472#0" expanded="true" />
-                <element signature="e#3577#3625#0" expanded="true" />
-                <element signature="e#3828#3878#0" expanded="true" />
-                <element signature="e#6511#6557#0" expanded="true" />
-                <element signature="e#6684#6732#0" expanded="true" />
-                <element signature="e#6849#6890#0" expanded="true" />
-                <element signature="e#7995#8043#0" expanded="true" />
-                <element signature="e#8246#8296#0" expanded="true" />
-                <element signature="e#9522#9571#0" expanded="true" />
-                <marker date="1481857298590" expanded="false" signature="2969:3115" ph="onClick(clickedView, contentView) → {" />
+                <element signature="e#1232#1233#0" expanded="true" />
+                <element signature="e#1259#1260#0" expanded="true" />
+                <element signature="e#1285#1286#0" expanded="true" />
+                <element signature="e#1314#1315#0" expanded="true" />
+                <element signature="e#1834#1880#0" expanded="true" />
+                <element signature="e#2165#2213#0" expanded="true" />
+                <element signature="e#2420#2462#0" expanded="true" />
+                <element signature="e#3567#3615#0" expanded="true" />
+                <element signature="e#3818#3868#0" expanded="true" />
+                <element signature="e#6501#6547#0" expanded="true" />
+                <element signature="e#6674#6722#0" expanded="true" />
+                <element signature="e#6839#6880#0" expanded="true" />
+                <element signature="e#7985#8033#0" expanded="true" />
+                <element signature="e#8236#8286#0" expanded="true" />
+                <element signature="e#9512#9561#0" expanded="true" />
+                <marker date="1481858515945" expanded="false" signature="2959:3105" ph="onClick(clickedView, contentView) → {" />
               </folding>
             </state>
           </provider>
@@ -3318,7 +3311,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="C:\Works\RememberNote" value="7408035867240" />
+        <entry key="C:\Works\RememberNote" value="7408036822619" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -3969,11 +3962,11 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/dreamdesigner/remembernote/database/NoteDao.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dreamdesigner/remembernote/application/NoteAppliction.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dreamdesigner/remembernote/utils/ExitApplictionUtils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/dreamdesigner/remembernote/dialog/WriteDialog.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-zh-rCN/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/dreamdesigner/remembernote/activity/HomeActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/dreamdesigner/remembernote/dialog/WriteDialog.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/dreamdesigner/remembernote/activity/HomeActivity.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
       </list>
     </option>
@@ -4888,30 +4881,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dreamdesigner/remembernote/dialog/WriteDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="71" column="46" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1166#1167#0" expanded="true" />
-            <element signature="e#1200#1201#0" expanded="true" />
-            <element signature="e#1844#1890#0" expanded="true" />
-            <element signature="e#2175#2223#0" expanded="true" />
-            <element signature="e#2430#2472#0" expanded="true" />
-            <element signature="e#3577#3625#0" expanded="true" />
-            <element signature="e#3828#3878#0" expanded="true" />
-            <element signature="e#6511#6557#0" expanded="true" />
-            <element signature="e#6684#6732#0" expanded="true" />
-            <element signature="e#6849#6890#0" expanded="true" />
-            <element signature="e#7995#8043#0" expanded="true" />
-            <element signature="e#8246#8296#0" expanded="true" />
-            <element signature="e#9522#9571#0" expanded="true" />
-            <marker date="1481857298590" expanded="false" signature="2969:3115" ph="onClick(clickedView, contentView) → {" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
@@ -4925,19 +4894,6 @@
         <state relative-caret-position="109">
           <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dreamdesigner/remembernote/activity/HomeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="250" column="0" selection-start-line="250" selection-start-column="0" selection-end-line="250" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5751#6110#0" expanded="true" />
-            <element signature="e#6109#6110#0" expanded="true" />
-            <element signature="e#8651#8683#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4957,10 +4913,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dreamdesigner/remembernote/dialog/WriteDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="45" column="26" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1166#1167#0" expanded="true" />
+            <element signature="e#1200#1201#0" expanded="true" />
+            <element signature="e#1232#1233#0" expanded="true" />
+            <element signature="e#1259#1260#0" expanded="true" />
+            <element signature="e#1285#1286#0" expanded="true" />
+            <element signature="e#1314#1315#0" expanded="true" />
+            <element signature="e#1834#1880#0" expanded="true" />
+            <element signature="e#2165#2213#0" expanded="true" />
+            <element signature="e#2420#2462#0" expanded="true" />
+            <element signature="e#3567#3615#0" expanded="true" />
+            <element signature="e#3818#3868#0" expanded="true" />
+            <element signature="e#6501#6547#0" expanded="true" />
+            <element signature="e#6674#6722#0" expanded="true" />
+            <element signature="e#6839#6880#0" expanded="true" />
+            <element signature="e#7985#8033#0" expanded="true" />
+            <element signature="e#8236#8286#0" expanded="true" />
+            <element signature="e#9512#9561#0" expanded="true" />
+            <marker date="1481858515945" expanded="false" signature="2959:3105" ph="onClick(clickedView, contentView) → {" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dreamdesigner/remembernote/activity/HomeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="133" column="45" selection-start-line="133" selection-start-column="45" selection-end-line="133" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5757#6116#0" expanded="true" />
+            <element signature="e#6115#6116#0" expanded="true" />
+            <element signature="e#8657#8689#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        <state relative-caret-position="270">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
           <folding />
         </state>
       </provider>
