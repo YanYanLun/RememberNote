@@ -19,6 +19,9 @@
     <string name="action_delete">删除</string>
     <string name="action_creat_shortcut">创建快捷方式</string>
 
+    <string name="English_App_Name">RememberNote</string>
+    <string name="Chinese_App_Name">记.随记</string>
+
     <string name="dialog_title">新随记</string>
     <string name="dialog_hint_title">输入随记标题</string>
     <string name="dialog_hint_content">输入随记内容</string>

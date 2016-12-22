@@ -104,14 +104,14 @@ public class NoteAppliction extends Application {
         if (!preferences.contains("ShortcutState")) {
             return;
         }
-        if (ShortcutUtils.hasShortcut(getApplicationContext(), getString(R.string.app_name))) {
-            if (!preferences.getBoolean("ShortcutState", false)) {
-                ShortcutUtils.deleteShortCut(getApplicationContext());
-            }
-            return;
-        }
         if (!preferences.getBoolean("ShortcutState", false))
             return;
+        if (ShortcutUtils.hasShortcut(getApplicationContext(), getString(R.string.Chinese_App_Name), getString(R.string.English_App_Name))) {
+//            if (!preferences.getBoolean("ShortcutState", false)) {
+//                ShortcutUtils.deleteShortCut(getApplicationContext());
+//            }
+            return;
+        }
         final Intent shortcutIntent = new Intent();
         shortcutIntent.setClass(getApplicationContext(), WelcomeActivity.class);
         shortcutIntent.setAction("android.intent.action.MAIN");

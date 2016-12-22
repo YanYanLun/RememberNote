@@ -48,9 +48,9 @@ public class ShortcutUtils {
      * @param title
      * @return
      */
-    public static boolean hasShortcut(Context context, String title) {
+    public static boolean hasShortcut(Context context, String title, String title2) {
         boolean isInstalled = false;
-        if (null == context || TextUtils.isEmpty(title)) {
+        if (null == context || TextUtils.isEmpty(title) || TextUtils.isEmpty(title2)) {
             return isInstalled;
         }
 
@@ -75,7 +75,24 @@ public class ShortcutUtils {
                 Log.e("hasShortcut", e.getMessage());
             }
         }
+        Log.i("hasShortcutChineseName", "找到中文名字");
+        if (!isInstalled) {
+            try {
+                final Uri CONTENT_URI = Uri.parse(AUTHORITY);
+                Cursor c = cr.query(CONTENT_URI, new String[]{"title", "iconResource"}, "title=?", new String[]{title2}, null);
 
+                if (c != null && c.getCount() > 0) {
+                    isInstalled = true;
+                }
+
+                if (null != c && !c.isClosed()) {
+                    c.close();
+                }
+            } catch (Exception e) {
+                Log.e("hasShortcut", e.getMessage());
+            }
+        }
+        Log.i("hasShortcutEnglishName", "找到英文名字");
         return isInstalled;
     }
 

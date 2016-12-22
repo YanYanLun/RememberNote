@@ -223,7 +223,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="33368c595511a0671069903ab11eb2d5205c588b">
+        sha1="db6b9092cd583a59fddad43c5b7c2435eb594e47">
         <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_16788d1e570eb18b059c1f11dd2d25580467744e\classes.dex" />
     </item>
     <item
@@ -232,7 +232,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="e049b8585c5591b69d85e6ab5691e876a84a01b9">
+        sha1="cb42f58e2d441ce1b87ff812640fd95e301f90f9">
         <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_6aeac312226455b4a2a9f897f225aa090693b04e\classes.dex" />
     </item>
     <item
