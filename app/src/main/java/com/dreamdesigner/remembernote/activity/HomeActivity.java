@@ -16,7 +16,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.dreamdesigner.library.BaseActivity.WriteActivity;
 import com.dreamdesigner.library.Utils.PopupList;
@@ -39,8 +38,6 @@ import org.greenrobot.greendao.rx.RxDao;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;

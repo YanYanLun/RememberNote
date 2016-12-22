@@ -2,13 +2,18 @@ package com.dreamdesigner.remembernote.application;
 
 import android.app.Application;
 import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 
 import com.dreamdesigner.library.Utils.BitmapUtil;
 import com.dreamdesigner.library.Utils.FastBlurUtil;
+import com.dreamdesigner.library.Utils.ShortcutUtils;
 import com.dreamdesigner.remembernote.R;
+import com.dreamdesigner.remembernote.activity.WelcomeActivity;
 import com.dreamdesigner.remembernote.database.DaoMaster;
 import com.dreamdesigner.remembernote.database.DaoSession;
 import com.dreamdesigner.remembernote.utils.ExitApplictionUtils;
@@ -38,6 +43,7 @@ public class NoteAppliction extends Application {
         super.onCreate();
         instance = this;
         ExitApplictionUtils.isExit = false;
+        addShortcut();
     }
 
     public static NoteAppliction getInstance() {
@@ -88,5 +94,30 @@ public class NoteAppliction extends Application {
         if (receivers == null)
             receivers = new ArrayList<>();
         return receivers;
+    }
+
+    public synchronized void addShortcut() {
+        SharedPreferences preferences = getSharedPreferences("NoteState", 0);
+        if (preferences == null) {
+            return;
+        }
+        if (!preferences.contains("ShortcutState")) {
+            return;
+        }
+        if (ShortcutUtils.hasShortcut(getApplicationContext(), getString(R.string.app_name))) {
+            if (!preferences.getBoolean("ShortcutState", false)) {
+                ShortcutUtils.deleteShortCut(getApplicationContext());
+            }
+            return;
+        }
+        if (!preferences.getBoolean("ShortcutState", false))
+            return;
+        final Intent shortcutIntent = new Intent();
+        shortcutIntent.setClass(getApplicationContext(), WelcomeActivity.class);
+        shortcutIntent.setAction("android.intent.action.MAIN");
+        shortcutIntent.addCategory("android.intent.category.LAUNCHER");
+        shortcutIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        final Intent.ShortcutIconResource iconRes = Intent.ShortcutIconResource.fromContext(getApplicationContext(), R.mipmap.ic_launcher);
+        ShortcutUtils.addShortcut(getApplicationContext(), getString(R.string.app_name), iconRes, shortcutIntent);
     }
 }

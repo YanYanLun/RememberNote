@@ -15,6 +15,7 @@
     <string name="action_update">更新随记</string>
     <string name="action_add">新增</string>
     <string name="action_delete">删除</string>
+    <string name="action_creat_shortcut">创建快捷方式</string>
 
     <string name="dialog_title">新随记</string>
     <string name="dialog_hint_title">输入随记标题</string>

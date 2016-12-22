@@ -17,6 +17,7 @@
     <string name="action_update">Update</string>
     <string name="action_add">Add</string>
     <string name="action_delete">Delete</string>
+    <string name="action_creat_shortcut">Create shortcut</string>
 
     <string name="dialog_title">New notes</string>
     <string name="dialog_hint_title">Enter the following header</string>
