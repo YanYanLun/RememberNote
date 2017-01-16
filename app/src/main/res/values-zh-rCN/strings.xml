@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">记.随记</string>
+    <string name="app_name">记随记</string>
     <string name="navigation_drawer_open">打开导航抽屉</string>
     <string name="navigation_drawer_close">关闭导航抽屉</string>
     <string name="title_activity_content">ContentActivity</string>
-    <string name="title_activity_setting">记.随记</string>
+    <string name="title_activity_setting">记随记</string>
+    <string name="string_data_backup">随记备份</string>
+    <string name="string_data_reduction">随记还原</string>
 
     <string name="no_data">没有找到数据！</string>
 
@@ -18,9 +20,13 @@
     <string name="action_add">新增</string>
     <string name="action_delete">删除</string>
     <string name="action_creat_shortcut">创建快捷方式</string>
+    <string name="action_version">当前版本</string>
+    <string name="action_refresh">刷新</string>
+    <string name="action_data_backup">备份</string>
+    <string name="action_data_reduction">还原</string>
 
     <string name="English_App_Name">RememberNote</string>
-    <string name="Chinese_App_Name">记.随记</string>
+    <string name="Chinese_App_Name">记随记</string>
 
     <string name="dialog_title">新随记</string>
     <string name="dialog_hint_title">输入随记标题</string>
@@ -36,6 +42,12 @@
     <string name="prompt_cancel">取消</string>
     <string name="prompt_look_note">查看随记</string>
     <string name="prompt_exit_note">再按一次退出程序</string>
+    <string name="prompt_no_notes">未找到随记，请稍候重试！</string>
+    <string name="prompt_backup_success">随记备份成功！</string>
+    <string name="prompt_backup_fail">随记备份失败！</string>
+    <string name="prompt_reduction_success">随记还原成功！</string>
+    <string name="prompt_reduction_fail">随记还原失败！</string>
+    <string name="prompt_not_changed">随记已经存在!</string>
 
     <string-array name="action_items">
         <item name="action_add">新增</item>

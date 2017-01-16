@@ -86,5 +86,10 @@ public class NoteData {
         }
         return listYear;
     }
+
+    public static List<Note> getNoteList() {
+        noteDao = NoteAppliction.getInstance().getDaoSession().getNoteDao();
+        return noteDao.loadAll();
+    }
 }
 

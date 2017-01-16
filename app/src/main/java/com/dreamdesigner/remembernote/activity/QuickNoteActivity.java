@@ -16,6 +16,7 @@ import com.dreamdesigner.remembernote.R;
 import com.dreamdesigner.remembernote.application.NoteAppliction;
 import com.dreamdesigner.remembernote.database.Note;
 import com.dreamdesigner.remembernote.database.NoteDao;
+import com.dreamdesigner.remembernote.utils.StaticValueUtils;
 import com.jaeger.library.StatusBarUtil;
 
 import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEvent;
@@ -106,21 +107,18 @@ public class QuickNoteActivity extends AppCompatActivity implements View.OnClick
         Note note = new Note();
         note.setTitle(title);
         note.setContent(content);
-        Calendar c = Calendar.getInstance();
-        int year = c.get(Calendar.YEAR);
-        int month = c.get(Calendar.MONTH) + 1;
-        int day = c.get(Calendar.DAY_OF_MONTH);
-        int hour = c.get(Calendar.HOUR_OF_DAY);
-        int minute = c.get(Calendar.MINUTE);
-        note.setYear(year);
-        note.setMonth(month);
-        note.setDay(day);
-        note.setTime(year + "-" + month + "-" + day + " " + hour + ":" + minute);
+        note.setYear(StaticValueUtils.getYear());
+        note.setMonth(StaticValueUtils.getMonth());
+        note.setDay(StaticValueUtils.getDay());
+        note.setTime(StaticValueUtils.getDataTime());
         long status = noteDao.insert(note);
         if (status > 0) {
             Toast.makeText(this, getString(R.string.prompt_new_note_success), Toast.LENGTH_SHORT).show();
             et.setText("");
             et1.setText("");
+            Intent intent = new Intent();
+            intent.setAction(StaticValueUtils.ACTION_REFRESH_MANUAL);
+            sendBroadcast(intent);
         } else {
             Toast.makeText(this, getString(R.string.prompt_new_note_fail), Toast.LENGTH_SHORT).show();
         }

@@ -17,6 +17,7 @@ import com.dreamdesigner.remembernote.utils.StaticValueUtils;
 import org.greenrobot.greendao.rx.RxDao;
 import org.w3c.dom.Text;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -103,19 +104,16 @@ public class WriteDialog {
                         }
                         mNote.setTitle(title);
                         mNote.setContent(content);
-                        Calendar c = Calendar.getInstance();
-                        int year = c.get(Calendar.YEAR);
-                        int month = c.get(Calendar.MONTH) + 1;
-                        int day = c.get(Calendar.DAY_OF_MONTH);
-                        int hour = c.get(Calendar.HOUR_OF_DAY);
-                        int minute = c.get(Calendar.MINUTE);
-                        mNote.setYear(year);
-                        mNote.setMonth(month);
-                        mNote.setDay(day);
-                        mNote.setTime(year + "-" + month + "-" + day + " " + hour + ":" + minute);
+                        mNote.setYear(StaticValueUtils.getYear());
+                        mNote.setMonth(StaticValueUtils.getMonth());
+                        mNote.setDay(StaticValueUtils.getDay());
+                        mNote.setTime(StaticValueUtils.getDataTime());
                         noteDao.update(mNote);
                         Intent intent = new Intent();
                         intent.setAction(StaticValueUtils.HomeNoteChangeValue);
+                        mContext.sendBroadcast(intent);
+                        intent = new Intent();
+                        intent.setAction(StaticValueUtils.ACTION_REFRESH_MANUAL);
                         mContext.sendBroadcast(intent);
                         mMDDialog.dismiss();
                     }
@@ -192,20 +190,17 @@ public class WriteDialog {
                         Note note = new Note();
                         note.setTitle(title);
                         note.setContent(content);
-                        Calendar c = Calendar.getInstance();
-                        int year = c.get(Calendar.YEAR);
-                        int month = c.get(Calendar.MONTH) + 1;
-                        int day = c.get(Calendar.DAY_OF_MONTH);
-                        int hour = c.get(Calendar.HOUR_OF_DAY);
-                        int minute = c.get(Calendar.MINUTE);
-                        note.setYear(year);
-                        note.setMonth(month);
-                        note.setDay(day);
-                        note.setTime(year + "-" + month + "-" + day + " " + hour + ":" + minute);
+                        note.setYear(StaticValueUtils.getYear());
+                        note.setMonth(StaticValueUtils.getMonth());
+                        note.setDay(StaticValueUtils.getDay());
+                        note.setTime(StaticValueUtils.getDataTime());
                         long status = noteDao.insert(note);
                         if (status > 0) {
                             Intent intent = new Intent();
                             intent.setAction(StaticValueUtils.HomeNoteChangeValue);
+                            mContext.sendBroadcast(intent);
+                            intent = new Intent();
+                            intent.setAction(StaticValueUtils.ACTION_REFRESH_MANUAL);
                             mContext.sendBroadcast(intent);
                         } else {
                             Toast.makeText(mContext, mContext.getString(R.string.prompt_new_note_fail), Toast.LENGTH_SHORT).show();

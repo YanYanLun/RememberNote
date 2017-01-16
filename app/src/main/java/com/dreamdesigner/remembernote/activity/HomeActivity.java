@@ -69,6 +69,12 @@ public class HomeActivity extends WriteActivity {
             popupMenuItemList.add(item);
         }
         noteDao = NoteAppliction.getInstance().getDaoSession().getNoteDao().rx();
+        String open = getIntent().getStringExtra(StaticValueUtils.SCHEME_DATA_KEY);
+        if (!TextUtils.isEmpty(open)) {
+            if (mDialog == null)
+                return;
+            mDialog.show();
+        }
     }
 
     @Override
@@ -138,6 +144,9 @@ public class HomeActivity extends WriteActivity {
                                     public void call(Void aVoid) {
                                         Log.d("DaoExample", "Deleted note, ID: " + note.getId());
                                         loadNewData();
+                                        Intent intent = new Intent();
+                                        intent.setAction(StaticValueUtils.ACTION_REFRESH_MANUAL);
+                                        HomeActivity.this.sendBroadcast(intent);
                                     }
                                 });
                         break;

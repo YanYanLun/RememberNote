@@ -47,11 +47,11 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.RvViewHolder> {
 
     @Override
     public void onBindViewHolder(RvViewHolder holder, int position) {
-        DataModel dataModal = data.get(position);
-        holder.tv.setText(dataModal.getName());
-        holder.setLevel(dataModal.getLevel());
-        if (dataModal.getLevel() == Level.LEVEL_THREE) {
-            holder.itemView.setTag(R.id.rv_item_card, dataModal.getNote());
+        DataModel dataModel = data.get(position);
+        holder.tv.setText(dataModel.getName());
+        holder.setLevel(dataModel.getLevel());
+        if (dataModel.getLevel() == Level.LEVEL_THREE) {
+            holder.itemView.setTag(R.id.rv_item_card, dataModel.getNote());
         }
     }
 

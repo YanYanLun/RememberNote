@@ -259,4 +259,25 @@ public class NoteDao extends AbstractDao<Note, Long> {
         Cursor cursor = db.rawQuery("SELECT * FROM " + NoteDao.TABLENAME + " ORDER BY TIME DESC", null);
         return loadAllAndCloseCursor(cursor);
     }
+
+    /**
+     * 查询最新的一条
+     *
+     * @return
+     */
+    public List<Note> QueryLastNotes() {
+        Cursor cursor = db.rawQuery("SELECT * FROM " + NoteDao.TABLENAME + " ORDER BY TIME DESC LIMIT 1", null);
+        return loadAllAndCloseCursor(cursor);
+    }
+
+    /**
+     * 查询数据是否存在
+     *
+     * @param time
+     * @return
+     */
+    public List<Note> QueryNotesExistence(String time) {
+        Cursor cursor = db.rawQuery("SELECT * FROM " + NoteDao.TABLENAME + " WHERE TIME=" + '"' + time + '"' + " ORDER BY TIME DESC", null);
+        return loadAllAndCloseCursor(cursor);
+    }
 }

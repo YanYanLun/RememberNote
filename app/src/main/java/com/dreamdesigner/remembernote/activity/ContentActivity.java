@@ -22,7 +22,7 @@ public class ContentActivity extends NoCollapsingActivity {
         }
         setContentView(R.layout.content_content);
         if (TextUtils.isEmpty(note.getTitle())) {
-            setTitle("记.随记");
+            setTitle(getString(R.string.app_name));
         } else {
             setTitle(note.getTitle());
         }

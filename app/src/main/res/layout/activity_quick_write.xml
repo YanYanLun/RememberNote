@@ -71,6 +71,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:orientation="horizontal"
             android:paddingBottom="8dp"
             android:paddingLeft="16dp"
@@ -81,18 +82,21 @@
                 android:layout_width="70dp"
                 android:layout_height="48dp"
                 android:layout_alignParentLeft="true"
-                android:gravity="right|center_vertical"
+                android:gravity="right|top"
                 android:text="@string/dialog_note_content"
                 android:textColor="#bb333333" />
 
             <EditText
                 android:id="@+id/edit1"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/title1"
                 android:background="@null"
+                android:gravity="top"
                 android:hint="@string/prompt_dialog_content"
+                android:maxLines="7"
+                android:minLines="7"
                 android:textColor="#ee333333"
                 android:textCursorDrawable="@drawable/color_cursor"
                 android:textSize="14dp" />

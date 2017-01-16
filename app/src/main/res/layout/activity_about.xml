@@ -14,17 +14,19 @@
         android:orientation="vertical">
 
         <ImageView
+            android:id="@+id/aboutImages"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:src="@mipmap/welcome" />
+            android:src="@null" />
+
         <TextView
             android:id="@+id/version"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="12dp"
             android:layout_gravity="center_horizontal"
+            android:text="@null"
             android:textColor="#999999"
-            android:text="@null"/>
+            android:textSize="12dp" />
     </LinearLayout>
 
 </RelativeLayout>

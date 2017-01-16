@@ -6,6 +6,8 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="title_activity_content">ContentActivity</string>
     <string name="title_activity_setting">RememberNote</string>
+    <string name="string_data_backup">Notes backup</string>
+    <string name="string_data_reduction">Notes reduction</string>
 
     <string name="no_data">No data found！</string>
 
@@ -18,9 +20,13 @@
     <string name="action_add">Add</string>
     <string name="action_delete">Delete</string>
     <string name="action_creat_shortcut">Create shortcut</string>
+    <string name="action_version">Version</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_data_backup">Backup</string>
+    <string name="action_data_reduction">Reduction</string>
 
     <string name="English_App_Name">RememberNote</string>
-    <string name="Chinese_App_Name">记.随记</string>
+    <string name="Chinese_App_Name">记随记</string>
 
     <string name="dialog_title">New notes</string>
     <string name="dialog_hint_title">Enter the following header</string>
@@ -36,6 +42,12 @@
     <string name="prompt_cancel">Cancel</string>
     <string name="prompt_look_note">Notes</string>
     <string name="prompt_exit_note">Then click one exit RememberNote</string>
+    <string name="prompt_no_notes">No notes found, please try again later!</string>
+    <string name="prompt_backup_success">Notes backup success！</string>
+    <string name="prompt_backup_fail">Notes backup fail！</string>
+    <string name="prompt_reduction_success">Notes reduction success！</string>
+    <string name="prompt_reduction_fail">Notes reduction fail！</string>
+    <string name="prompt_not_changed">Notes not changed!</string>
 
     <string-array name="action_items">
         <item name="action_add">Add</item>

@@ -8,10 +8,11 @@
 
 
     <ImageView
+        android:id="@+id/welcomImages"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:src="@mipmap/welcome" />
+        android:src="@null" />
 
 </RelativeLayout>

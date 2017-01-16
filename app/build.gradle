@@ -7,8 +7,8 @@ android {
         applicationId "com.dreamdesigner.remembernote"
         minSdkVersion 21
         targetSdkVersion 24
-        versionCode 1
-        versionName "1.0"
+        versionCode 6
+        versionName "1.1.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -38,5 +38,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile project(':library')
     compile project(':dialoglibrary')
+    compile files('libs/jxl.jar')
 //    compile project(':greendao')
 }
