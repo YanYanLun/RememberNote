@@ -2,6 +2,33 @@
 <items version="2" >
 
     <item
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\com.android.support-support-vector-drawable-25.0.1_eecdfd24a88b3deabcaacbf8b6feea68a3866a6f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\com.android.support-recyclerview-v7-24.2.1_fabb425c7a27020d1e6dadc397bfeb9c9870ecfe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\RememberNote\library\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="bfeb720ef99ed402a84211221340ffeedebae7cc">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\RememberNote-library-unspecified_5f612474c90cabe73eb3e3cc665d1820a6a98fc8.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\classes.jar"
         jumboMode="true"
@@ -29,22 +56,22 @@
         <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.jakewharton.rxbinding-rxbinding-0.4.0_6a36b7775cc04035851d507e5d45a4f2a5919808\classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.1\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\io.reactivex\rxandroid\1.2.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
-        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
-        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.0.1_eecdfd24a88b3deabcaacbf8b6feea68a3866a6f\classes.dex" />
+        sha1="5a2386ad9bfff580b206a7fe305cdccd00798159">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\io.reactivex-rxandroid-1.2.1_c27e7aec5f0502cdbdfed03e102ff72f0afb5ac3.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\XIANG\.gradle\caches\modules-2\files-2.1\org.greenrobot\greendao-api\3.2.0\c6d610abe1d75d758431c9234917a349abc0a0ac\greendao-api-3.2.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
-        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.1_fabb425c7a27020d1e6dadc397bfeb9c9870ecfe\classes.dex" />
+        sha1="c6d610abe1d75d758431c9234917a349abc0a0ac">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\greendao-api-3.2.0_4d72fd12d487811a02c7ca3942ab70301c25fe65.jar" />
     </item>
     <item
         is-multidex="true"
@@ -57,15 +84,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.jaeger.statusbaruitl\library\1.3.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="076cf32bfee69a9a53249251e74ddc30a381c7f1">
-        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.jaeger.statusbaruitl-library-1.3.1_d9509f2e9db1bdf19a2b0adc99809d7d968bf9a3\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Works\RememberNote\app\libs\jxl.jar"
         jumboMode="true"
         optimize="true"
@@ -74,13 +92,22 @@
         <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\2\jxl_beaf4bb6a4e7a6e8ca6399b1fb74b6b726698b4f\classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.jaeger.statusbaruitl\library\1.3.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
-        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
-        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_c46b3611bc833e31658b2ca350d2c4c8cb99613d\classes.dex" />
+        sha1="076cf32bfee69a9a53249251e74ddc30a381c7f1">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\com.jaeger.statusbaruitl-library-1.3.1_d9509f2e9db1bdf19a2b0adc99809d7d968bf9a3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\com.android.support-support-media-compat-25.0.1_2e52ce7cee2cc4f4327cf665ad4cf98261a5ed3f.jar" />
     </item>
     <item
         is-multidex="true"
@@ -92,13 +119,13 @@
         <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\net.zetetic-android-database-sqlcipher-3.5.4_747df00abe0806e37534aa0369f15926bb47c474\classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\RememberNote\dialoglibrary\unspecified\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
-        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
-        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.0.1_2e52ce7cee2cc4f4327cf665ad4cf98261a5ed3f\classes.dex" />
+        sha1="256a541627eba461db152f4f8c6a42ff8402973d">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\RememberNote-dialoglibrary-unspecified_1e3be48ff81b6298e3123849423c0806a29ef898.jar" />
     </item>
     <item
         is-multidex="true"
@@ -110,13 +137,13 @@
         <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.0.1_b4daefe2b9a0ad1d02511f3ef67396c91e246103\classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\XIANG\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
-        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\library-2.4.0_148d96c83d748fd89a4d8717bb467f3535e367b4\classes.dex" />
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\internal_impl-25.0.1_c46b3611bc833e31658b2ca350d2c4c8cb99613d.jar" />
     </item>
     <item
         is-multidex="true"
@@ -128,6 +155,15 @@
         <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.0.1_e0206455dcee314dc4b4da24359be20852e04ebf\classes.dex" />
     </item>
     <item
+        is-multidex="false"
+        jar="C:\Users\XIANG\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\library-2.4.0_148d96c83d748fd89a4d8717bb467f3535e367b4.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
         jumboMode="true"
@@ -137,31 +173,13 @@
         <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_fdee32ce3ab7765c5f9f9090b0fbbf0cb5e8a912\classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\io.reactivex\rxandroid\1.2.1\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
-        sha1="5a2386ad9bfff580b206a7fe305cdccd00798159">
-        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\io.reactivex-rxandroid-1.2.1_c27e7aec5f0502cdbdfed03e102ff72f0afb5ac3\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Works\RememberNote\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="9d67a55b777d24aca44c97f8e28c34d8c09b0dff">
-        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_16788d1e570eb18b059c1f11dd2d25580467744e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Works\RememberNote\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="0971d3e63a253ef1d3669ca3118607d67beb634a">
-        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_6aeac312226455b4a2a9f897f225aa090693b04e\classes.dex" />
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\internal_impl-25.0.1_2a77c09589bc08ecdc502b6bccd22eebec9ba309.jar" />
     </item>
     <item
         is-multidex="true"
@@ -192,6 +210,294 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.0.1_58ba8680da20a3d369876d5cc1238cc3b4d89c33\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\internal_impl-25.0.1_d199734f7301539697721e50a62c77bf7c861593.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-base-8.4.0_f82dc34408d63d98dbe12f83fb702c4c83a7a338.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\net.yslibrary.keyboardvisibilityevent\keyboardvisibilityevent\2.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="6d237cd9c1626fbf68827947987660ec2c935fbb">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\net.yslibrary.keyboardvisibilityevent-keyboardvisibilityevent-2.0.0_4032836df0cd030ca05a0f1e340278ceb7635afb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="c5e6490573cd2cc8018417f60ddd251138b6ed61">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\com.android.support-cardview-v7-24.2.1_fa3b028c024a2fd1cae849bc5896f3925eb82949.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\XIANG\.gradle\caches\modules-2\files-2.1\org.greenrobot\greendao-api\3.2.0\c6d610abe1d75d758431c9234917a349abc0a0ac\greendao-api-3.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="c6d610abe1d75d758431c9234917a349abc0a0ac">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\greendao-api-3.2.0_4d72fd12d487811a02c7ca3942ab70301c25fe65\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-8.4.0_e8fa4c131ed3321020731e8a6f3af6fdc29568a3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\XIANG\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.1.8\f9dbae366a6a3d6b5041c5e8db0dcdfdc35c27b5\rxjava-1.1.8.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="f9dbae366a6a3d6b5041c5e8db0dcdfdc35c27b5">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\rxjava-1.1.8_cb5d538ebc62acc2c334ddff9599418f409bc45a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.2.1_b541e84dd314dc673c7d45241945ffde3fffc1f6\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\internal_impl-25.0.1_62e399fdfc472ad6a5f6414ad0a269962b4f2812.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\XIANG\.gradle\caches\modules-2\files-2.1\org.greenrobot\greendao\3.2.0\e70040568b2929b8e5869ad1ffca8e4386dc53bc\greendao-3.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e70040568b2929b8e5869ad1ffca8e4386dc53bc">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\greendao-3.2.0_28b18f94bc4cc2a52369ab5733fbb1a8f3200f51\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\com.android.support-support-compat-25.0.1_58ba8680da20a3d369876d5cc1238cc3b4d89c33.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.0.1_eecdfd24a88b3deabcaacbf8b6feea68a3866a6f\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\com.android.support-support-core-ui-25.0.1_95b973118a96fa8130f6c9f300f551bafc26e8f3.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.1_fabb425c7a27020d1e6dadc397bfeb9c9870ecfe\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\com.android.support-appcompat-v7-25.0.1_b4daefe2b9a0ad1d02511f3ef67396c91e246103.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.jaeger.statusbaruitl\library\1.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="076cf32bfee69a9a53249251e74ddc30a381c7f1">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.jaeger.statusbaruitl-library-1.3.1_d9509f2e9db1bdf19a2b0adc99809d7d968bf9a3\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\internal_impl-25.0.1_fdee32ce3ab7765c5f9f9090b0fbbf0cb5e8a912.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\net.zetetic\android-database-sqlcipher\3.5.4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="310bcc4b2dbdddf4b2200e84b32a05b00e5f7ba4">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\net.zetetic-android-database-sqlcipher-3.5.4_747df00abe0806e37534aa0369f15926bb47c474.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_c46b3611bc833e31658b2ca350d2c4c8cb99613d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.0.1_2e52ce7cee2cc4f4327cf665ad4cf98261a5ed3f\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-basement-8.4.0_ed6c25c4740c1646bd54a0db3af8fc75e4ea1c87.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\XIANG\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\library-2.4.0_148d96c83d748fd89a4d8717bb467f3535e367b4\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\com.android.support-animated-vector-drawable-25.0.1_cb02e4ae3a08e2490c637f04510348bd53bb29d2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\com.android.support-support-fragment-25.0.1_e0206455dcee314dc4b4da24359be20852e04ebf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\libs\jxl.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="955fa72ef2e3d5a45db59d84802401f75bc973a5">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\jxl_beaf4bb6a4e7a6e8ca6399b1fb74b6b726698b4f.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\io.reactivex\rxandroid\1.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5a2386ad9bfff580b206a7fe305cdccd00798159">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\io.reactivex-rxandroid-1.2.1_c27e7aec5f0502cdbdfed03e102ff72f0afb5ac3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Works\RememberNote\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9d67a55b777d24aca44c97f8e28c34d8c09b0dff">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_16788d1e570eb18b059c1f11dd2d25580467744e\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.jakewharton.rxbinding\rxbinding\0.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ffc09f4e5bdebe068e5101f587dadc42b60fbfe4">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\com.jakewharton.rxbinding-rxbinding-0.4.0_6a36b7775cc04035851d507e5d45a4f2a5919808.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Works\RememberNote\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0971d3e63a253ef1d3669ca3118607d67beb634a">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_6aeac312226455b4a2a9f897f225aa090693b04e\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\soft\android-sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.1\support-annotations-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\support-annotations-25.0.1_7a36aba1bbf7f39cb3a0defba85f4220976040f6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\com.android.support-support-core-utils-25.0.1_02e266fe7e2c895818bf0494bf16f1d86c212a15.jar" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\libs\internal_impl-25.0.1.jar"
         jumboMode="true"
         optimize="true"
@@ -200,13 +506,13 @@
         <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_2a77c09589bc08ecdc502b6bccd22eebec9ba309\classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
-        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
-        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.0.1_58ba8680da20a3d369876d5cc1238cc3b4d89c33\classes.dex" />
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\com.android.support-support-v4-25.0.1_9926575182930db87f480165f62af4cc6ba388b2.jar" />
     </item>
     <item
         is-multidex="true"
@@ -237,15 +543,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\XIANG\.gradle\caches\modules-2\files-2.1\org.greenrobot\greendao-api\3.2.0\c6d610abe1d75d758431c9234917a349abc0a0ac\greendao-api-3.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="c6d610abe1d75d758431c9234917a349abc0a0ac">
-        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\greendao-api-3.2.0_4d72fd12d487811a02c7ca3942ab70301c25fe65\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\net.yslibrary.keyboardvisibilityevent\keyboardvisibilityevent\2.0.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -263,40 +560,40 @@
         <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-8.4.0_f82dc34408d63d98dbe12f83fb702c4c83a7a338\classes.dex" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
         sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
-        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-8.4.0_e8fa4c131ed3321020731e8a6f3af6fdc29568a3\classes.dex" />
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-appindexing-8.4.0_e8fa4c131ed3321020731e8a6f3af6fdc29568a3.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\XIANG\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.1.8\f9dbae366a6a3d6b5041c5e8db0dcdfdc35c27b5\rxjava-1.1.8.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="f9dbae366a6a3d6b5041c5e8db0dcdfdc35c27b5">
-        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\rxjava-1.1.8_cb5d538ebc62acc2c334ddff9599418f409bc45a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\Works\RememberNote\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
         sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
-        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.2.1_b541e84dd314dc673c7d45241945ffde3fffc1f6\classes.dex" />
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\com.android.support-design-24.2.1_b541e84dd314dc673c7d45241945ffde3fffc1f6.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\Users\XIANG\.gradle\caches\modules-2\files-2.1\org.greenrobot\greendao\3.2.0\e70040568b2929b8e5869ad1ffca8e4386dc53bc\greendao-3.2.0.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
         sha1="e70040568b2929b8e5869ad1ffca8e4386dc53bc">
-        <dex dex="C:\Works\RememberNote\app\build\intermediates\transforms\dex\debug\folders\1000\10\greendao-3.2.0_28b18f94bc4cc2a52369ab5733fbb1a8f3200f51\classes.dex" />
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\greendao-3.2.0_28b18f94bc4cc2a52369ab5733fbb1a8f3200f51.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\XIANG\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.1.8\f9dbae366a6a3d6b5041c5e8db0dcdfdc35c27b5\rxjava-1.1.8.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="f9dbae366a6a3d6b5041c5e8db0dcdfdc35c27b5">
+        <dex dex="C:\Works\RememberNote\app\build\intermediates\pre-dexed\release\rxjava-1.1.8_cb5d538ebc62acc2c334ddff9599418f409bc45a.jar" />
     </item>
 
 </items>
