@@ -2,7 +2,6 @@ package com.dreamdesigner.remembernote.application;
 
 import android.app.Application;
 import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -16,6 +15,7 @@ import com.dreamdesigner.remembernote.R;
 import com.dreamdesigner.remembernote.activity.WelcomeActivity;
 import com.dreamdesigner.remembernote.database.DaoMaster;
 import com.dreamdesigner.remembernote.database.DaoSession;
+import com.dreamdesigner.remembernote.service.FloatBallService;
 import com.dreamdesigner.remembernote.utils.ExitApplictionUtils;
 
 import org.greenrobot.greendao.database.Database;
@@ -37,13 +37,17 @@ public class NoteAppliction extends Application {
     public static Bitmap blurBitmap;
     private Drawable drawable;
     private List<BroadcastReceiver> receivers;
+    private SharedPreferences preferences;
 
     @Override
     public void onCreate() {
         super.onCreate();
         instance = this;
         ExitApplictionUtils.isExit = false;
+        preferences = getSharedPreferences("NoteState", 0);
         addShortcut();
+        Intent intent = new Intent(this, FloatBallService.class);
+        startService(intent);
     }
 
     public static NoteAppliction getInstance() {

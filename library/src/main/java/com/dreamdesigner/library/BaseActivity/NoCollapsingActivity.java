@@ -1,5 +1,6 @@
 package com.dreamdesigner.library.BaseActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.dreamdesigner.library.R;
+import com.dreamdesigner.library.Utils.AppOnForegroundUtils;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.jaeger.library.StatusBarUtil;
 
@@ -72,5 +74,25 @@ public abstract class NoCollapsingActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (!AppOnForegroundUtils.isAppOnForeground(this)) {
+            //app 进入后台
+            //全局变量isActive = false 记录当前已经进入后台
+            Intent intent = new Intent();
+            intent.setAction("activity.isAppOnForeground");
+            sendBroadcast(intent);
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Intent intent = new Intent();
+        intent.setAction("activity.isAppUnForeground");
+        sendBroadcast(intent);
     }
 }

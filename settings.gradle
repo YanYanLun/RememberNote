@@ -1,1 +1,1 @@
-include ':app', ':library', ':dialoglibrary'
+include ':app', ':library', ':dialoglibrary', ':floatballlibrary', ':floatingactionbuttonlibrary'

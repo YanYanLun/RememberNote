@@ -4,17 +4,9 @@ import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
-import android.widget.RemoteViews;
 
-import com.dreamdesigner.remembernote.R;
 import com.dreamdesigner.remembernote.activity.HomeActivity;
-import com.dreamdesigner.remembernote.application.NoteAppliction;
-import com.dreamdesigner.remembernote.database.Note;
-import com.dreamdesigner.remembernote.database.NoteDao;
 import com.dreamdesigner.remembernote.utils.StaticValueUtils;
-
-import java.util.List;
 
 /**
  * Implementation of App Widget functionality.

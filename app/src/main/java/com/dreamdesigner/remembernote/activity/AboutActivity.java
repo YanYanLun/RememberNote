@@ -1,5 +1,6 @@
 package com.dreamdesigner.remembernote.activity;
 
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -9,6 +10,7 @@ import com.dreamdesigner.library.BaseActivity.NoCollapsingActivity;
 import com.dreamdesigner.library.funswitch.FunSwitch;
 import com.dreamdesigner.remembernote.BuildConfig;
 import com.dreamdesigner.remembernote.R;
+import com.dreamdesigner.remembernote.utils.StaticValueUtils;
 
 import java.util.Locale;
 

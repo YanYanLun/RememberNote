@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/RememberNote.iml" filepath="$PROJECT_DIR$/RememberNote.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/dialoglibrary/dialoglibrary.iml" filepath="$PROJECT_DIR$/dialoglibrary/dialoglibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/floatballlibrary/floatballlibrary.iml" filepath="$PROJECT_DIR$/floatballlibrary/floatballlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/floatingactionbuttonlibrary/floatingactionbuttonlibrary.iml" filepath="$PROJECT_DIR$/floatingactionbuttonlibrary/floatingactionbuttonlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
     </modules>
   </component>

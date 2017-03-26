@@ -5,6 +5,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
-    <string name="title_activity_no_collapsing">NoCollapsingActivity</string>
     <string name="no_data">没有找到数据！</string>
+    <string name="action_audio_recorder">语音</string>
+    <string name="action_note_write">文字</string>
 </resources>

@@ -8,9 +8,9 @@
         android:id="@+id/note_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/view"
         android:lineSpacingExtra="2dp"
         android:lineSpacingMultiplier="1.2"
+        android:minLines="8"
         android:text="@string/app_name"
         android:textColor="#999999"
         android:textSize="12dp" />

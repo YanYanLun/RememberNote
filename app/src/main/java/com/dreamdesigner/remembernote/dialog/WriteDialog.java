@@ -10,16 +10,9 @@ import android.widget.Toast;
 import com.dreamdesigner.dialoglibrary.MDDialog;
 import com.dreamdesigner.remembernote.R;
 import com.dreamdesigner.remembernote.application.NoteAppliction;
-import com.dreamdesigner.remembernote.database.Note;
+import com.dreamdesigner.remembernote.models.Note;
 import com.dreamdesigner.remembernote.database.NoteDao;
 import com.dreamdesigner.remembernote.utils.StaticValueUtils;
-
-import org.greenrobot.greendao.rx.RxDao;
-import org.w3c.dom.Text;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 
 
 /**
@@ -129,11 +122,8 @@ public class WriteDialog {
                     @Override
                     public void onItemClicked(int index) {
                         if (index == 0) {
-                            Toast.makeText(mContext, "index 0", Toast.LENGTH_SHORT).show();
                         } else if (index == 1) {
-                            Toast.makeText(mContext, "index 1", Toast.LENGTH_SHORT).show();
                         } else if (index == 2) {
-                            Toast.makeText(mContext, "index 2", Toast.LENGTH_SHORT).show();
                         }
                     }
                 })
@@ -194,6 +184,7 @@ public class WriteDialog {
                         note.setMonth(StaticValueUtils.getMonth());
                         note.setDay(StaticValueUtils.getDay());
                         note.setTime(StaticValueUtils.getDataTime());
+                        note.setType(1);
                         long status = noteDao.insert(note);
                         if (status > 0) {
                             Intent intent = new Intent();
@@ -219,11 +210,8 @@ public class WriteDialog {
                     @Override
                     public void onItemClicked(int index) {
                         if (index == 0) {
-                            Toast.makeText(mContext, "index 0", Toast.LENGTH_SHORT).show();
                         } else if (index == 1) {
-                            Toast.makeText(mContext, "index 1", Toast.LENGTH_SHORT).show();
                         } else if (index == 2) {
-                            Toast.makeText(mContext, "index 2", Toast.LENGTH_SHORT).show();
                         }
                     }
                 })

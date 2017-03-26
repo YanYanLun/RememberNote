@@ -1,15 +1,13 @@
 package com.dreamdesigner.remembernote.widget;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
 
 import com.dreamdesigner.remembernote.R;
 import com.dreamdesigner.remembernote.application.NoteAppliction;
-import com.dreamdesigner.remembernote.database.Note;
+import com.dreamdesigner.remembernote.models.Note;
 import com.dreamdesigner.remembernote.database.NoteDao;
 
 import java.util.ArrayList;

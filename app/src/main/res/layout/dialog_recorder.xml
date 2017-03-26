@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:voiceView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.dreamdesigner.remembernote.widget.VoiceLineView
+        android:id="@+id/voiceLine"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@android:color/transparent"
+        voiceView:middleLine="@android:color/transparent"
+        voiceView:middleLineHeight="0dp"
+        voiceView:rectSpace="0dp"
+        voiceView:rectWidth="1dp"
+        voiceView:viewMode="line"
+        voiceView:voiceLine="@android:color/holo_red_light" />
+
+    <TextView
+        android:id="@+id/id_recorder_dialog_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="手指上滑，取消发送"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

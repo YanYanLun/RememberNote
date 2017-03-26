@@ -4,6 +4,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteStatement;
 import android.text.TextUtils;
 
+import com.dreamdesigner.remembernote.models.Note;
+
 import org.greenrobot.greendao.AbstractDao;
 import org.greenrobot.greendao.Property;
 import org.greenrobot.greendao.database.Database;
@@ -34,7 +36,8 @@ public class NoteDao extends AbstractDao<Note, Long> {
         public final static Property Year = new Property(5, Long.class, "year", false, "YEAR");
         public final static Property Month = new Property(6, Long.class, "month", false, "MONTH");
         public final static Property Day = new Property(7, Long.class, "day", false, "DAY");
-        public final static Property Time = new Property(8, Long.class, "time", false, "TIME");
+        public final static Property Type = new Property(8, Long.class, "type", false, "TYPE");
+        public final static Property Time = new Property(9, Long.class, "time", false, "TIME");
     }
 
     private DaoSession daoSession;
@@ -75,7 +78,8 @@ public class NoteDao extends AbstractDao<Note, Long> {
                 "\"YEAR\" INTEGER," + // 5: year
                 "\"MONTH\" INTEGER," + // 6: month
                 "\"DAY\" INTEGER," + // 7: day
-                "\"TIME\" TEXT);"); // 8: time
+                "\"TYPE\" INTEGER," + // 8:type
+                "\"TIME\" TEXT);"); // 9: time
         db.execSQL("CREATE UNIQUE INDEX " + constraint + "IDX_NOTE_TEXT_DATE_DESC ON NOTE" +
                 " (\"ID\" ASC,\"ID\" DESC);");
     }
@@ -131,10 +135,13 @@ public class NoteDao extends AbstractDao<Note, Long> {
         if (day != 0) {
             stmt.bindLong(8, day);
         }
-
+        int type = entity.getType();
+        if (type != 0) {
+            stmt.bindLong(9, type);
+        }
         String time = entity.getTime();
         if (!TextUtils.isEmpty(time)) {
-            stmt.bindString(9, time);
+            stmt.bindString(10, time);
         }
     }
 
@@ -181,10 +188,13 @@ public class NoteDao extends AbstractDao<Note, Long> {
         if (day != 0) {
             stmt.bindLong(8, day);
         }
-
+        int type = entity.getType();
+        if (type != 0) {
+            stmt.bindLong(9, type);
+        }
         String time = entity.getTime();
         if (!TextUtils.isEmpty(time)) {
-            stmt.bindString(9, time);
+            stmt.bindString(10, time);
         }
     }
 
@@ -211,7 +221,8 @@ public class NoteDao extends AbstractDao<Note, Long> {
                 cursor.getInt(offset + 5), // year
                 cursor.getInt(offset + 6), // month
                 cursor.getInt(offset + 7), // day
-                cursor.isNull(offset + 8) ? "" : cursor.getString(offset + 8) // time
+                cursor.getInt(offset + 8), // type
+                cursor.isNull(offset + 9) ? "" : cursor.getString(offset + 9) // time
         );
         return entity;
     }
@@ -226,7 +237,8 @@ public class NoteDao extends AbstractDao<Note, Long> {
         entity.setYear(cursor.getInt(offset + 5));  // year
         entity.setMonth(cursor.getInt(offset + 6));   // month
         entity.setDay(cursor.getInt(offset + 7));  // day
-        entity.setTime(cursor.isNull(offset + 8) ? "" : cursor.getString(offset + 8)); // time
+        entity.setType(cursor.getInt(offset + 8));  // day
+        entity.setTime(cursor.isNull(offset + 9) ? "" : cursor.getString(offset + 8)); // time
     }
 
     @Override
@@ -266,7 +278,7 @@ public class NoteDao extends AbstractDao<Note, Long> {
      * @return
      */
     public List<Note> QueryLastNotes() {
-        Cursor cursor = db.rawQuery("SELECT * FROM " + NoteDao.TABLENAME + " ORDER BY TIME DESC LIMIT 1", null);
+        Cursor cursor = db.rawQuery("SELECT * FROM " + NoteDao.TABLENAME + " WHERE TYPE='1' ORDER BY TIME DESC LIMIT 1", null);
         return loadAllAndCloseCursor(cursor);
     }
 

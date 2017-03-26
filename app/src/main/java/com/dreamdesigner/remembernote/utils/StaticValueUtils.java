@@ -1,6 +1,7 @@
 package com.dreamdesigner.remembernote.utils;
 
 import android.os.Environment;
+import android.util.Log;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -17,6 +18,12 @@ public class StaticValueUtils {
     public static final String SCHEME_DATA_KEY = "dataKey";
     public static final String OPEN = "OpenWithAppWidget";
     public static final String ACTION_WRITE_LOGO = "com.dreamdesigner.remembernote.utils.ACTION_WRITE_LOGO";
+    public static final String ColseActivity = "colse.activity";
+    public static final String FloatBallToShareValue = "FloatBallToShare.Value";
+    public static final String Back_Route = StaticValueUtils.getSDPath() + "/RememberNotesBackup";
+    public static final String Voice_Route = StaticValueUtils.getSDPath() + "/RememberNotesBackup/Voice";
+    public static final String SCHEME_VOICE_KEY = "VOICE";
+    public static final String VOICE_OPEN = "OpenWithQuickNote";
 
     public static String getSDPath() {
         File sdDir = null;
@@ -33,7 +40,7 @@ public class StaticValueUtils {
         if (!dir.getParentFile().exists()) {
             makeDir(dir.getParentFile());
         }
-        dir.mkdir();
+        dir.mkdirs();
     }
 
     public static String getDataTime() {

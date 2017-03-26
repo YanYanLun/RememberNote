@@ -2,12 +2,11 @@ package com.dreamdesigner.remembernote.utils;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.dreamdesigner.remembernote.R;
 import com.dreamdesigner.remembernote.application.NoteAppliction;
-import com.dreamdesigner.remembernote.database.Note;
+import com.dreamdesigner.remembernote.models.Note;
 import com.dreamdesigner.remembernote.database.NoteDao;
 
 import java.io.File;
@@ -161,6 +160,7 @@ public class ExcelUtils {
             Workbook course = null;
             course = Workbook.getWorkbook(new File(StaticValueUtils.getSDPath() + "/RememberNotesBackup/NotesBackup.xls"));
             Sheet sheet = course.getSheet(0);
+            int aa = sheet.getColumns();
             Cell cell = null;
             for (int i = 1; i < sheet.getRows(); i++) {
                 Note note = new Note();
@@ -180,8 +180,16 @@ public class ExcelUtils {
                 note.setMonth(Integer.parseInt(cell.getContents()));
                 cell = sheet.getCell(7, i);
                 note.setDay(Integer.parseInt(cell.getContents()));
-                cell = sheet.getCell(8, i);
-                note.setTime(cell.getContents());
+                if (aa == 9) {
+                    note.setType(1);
+                    cell = sheet.getCell(8, i);
+                    note.setTime(cell.getContents());
+                } else if (aa == 10) {
+                    cell = sheet.getCell(8, i);
+                    note.setType(Integer.parseInt(cell.getContents()));
+                    cell = sheet.getCell(9, i);
+                    note.setTime(cell.getContents());
+                }
                 List<Note> list = noteDao.QueryNotesExistence(note.getTime());
                 if (list == null) {
                     long sum = noteDao.insert(note);

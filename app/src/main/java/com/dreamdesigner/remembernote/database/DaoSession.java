@@ -1,5 +1,7 @@
 package com.dreamdesigner.remembernote.database;
 
+import com.dreamdesigner.remembernote.models.Note;
+
 import java.util.Map;
 
 import org.greenrobot.greendao.AbstractDao;

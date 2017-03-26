@@ -117,12 +117,21 @@
             android:layout_marginRight="16dp"
             android:background="@null">
 
+            <ImageView
+                android:id="@+id/voice"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/ic_settings_voice_white_48dp" />
+
             <TextView
                 android:id="@+id/enter"
                 android:layout_width="wrap_content"
                 android:layout_height="52dp"
-                android:layout_alignParentRight="true"
                 android:layout_marginRight="30dp"
+                android:layout_toLeftOf="@+id/voice"
                 android:gravity="center"
                 android:text="@string/prompt_enter"
                 android:textColor="@color/colorPrimary"
@@ -144,7 +153,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="52dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="10dp"
                 android:gravity="center"
                 android:text="@string/prompt_look_note"
                 android:textColor="@color/colorPrimary"

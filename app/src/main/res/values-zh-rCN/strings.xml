@@ -24,6 +24,9 @@
     <string name="action_refresh">刷新</string>
     <string name="action_data_backup">备份</string>
     <string name="action_data_reduction">还原</string>
+    <string name="action_creat_float_button">开启悬浮球</string>
+    <string name="action_audio_recorder">语音</string>
+    <string name="action_note_write">文字</string>
 
     <string name="English_App_Name">RememberNote</string>
     <string name="Chinese_App_Name">记随记</string>
@@ -48,6 +51,31 @@
     <string name="prompt_reduction_success">随记还原成功！</string>
     <string name="prompt_reduction_fail">随记还原失败！</string>
     <string name="prompt_not_changed">随记已经存在!</string>
+    <string name="prompt_other_app_up">请允许在其他应用上层显示</string>
+    <string name="prompt_access">请开启悬浮球辅助功能</string>
+    <string name="prompt_other_app_up_title">显示在应用上层</string>
+    <string name="prompt_access_title">辅助功能</string>
+    <string name="prompt_update">语音随记暂时不支持修改</string>
+    <!--SettingActivity-->
+    <string name="prompt_storage_explain">备份随记需要使用到缓存及文件存储操作,需要您授予相关的存储权限!\n请点击弹出框的允许按钮</string>
+    <string name="prompt_storage_explain2">您拒绝了权限，可能会导致该应用内部发生错误,请尽快授权</string>
+    <string name="prompt_storage_explain3">请求权限</string>
+    <string name="prompt_storage_explain4">缺少存储权限</string>
+    <string name="prompt_storage_explain5">记随记缺少存储权限,请去设置界面授权</string>
+    <string name="prompt_storage_explain6">您拒绝了权限，可能会导致该应用内部发生错误,请尽快授权</string>
+    <string name="prompt_storage_explain7">不再提醒</string>
+    <string name="prompt_storage_explain8">将不再提醒请求基础权限,建议尽快授权</string>
+    <string name="prompt_storage_explain9">设置</string>
+    <!--SettingActivity-->
+    <string name="prompt_audio_explain">语音随记需要使用到麦克风录音操作,需要您授予相关的录音权限!\n请点击弹出框的允许按钮</string>
+    <string name="prompt_audio_explain2">您拒绝了权限，可能会导致该应用内部发生错误,请尽快授权</string>
+    <string name="prompt_audio_explain3">请求权限</string>
+    <string name="prompt_audio_explain4">缺少录音权限</string>
+    <string name="prompt_audio_explain5">记随记缺少录音权限,请去设置界面授权</string>
+    <string name="prompt_audio_explain6">您拒绝了权限，可能会导致该应用内部发生错误,请尽快授权</string>
+    <string name="prompt_audio_explain7">不再提醒</string>
+    <string name="prompt_audio_explain8">将不再提醒请求基础权限,建议尽快授权</string>
+    <string name="prompt_audio_explain9">设置</string>
 
     <string-array name="action_items">
         <item name="action_add">新增</item>
@@ -55,4 +83,12 @@
         <item name="action_delete">删除</item>
     </string-array>
 
+    <string name="str_recorder_normal">按住 说话</string>
+    <string name="str_recorder_recording">松开 结束</string>
+    <string name="str_recorder_want_cancel">松开手指 取消发送</string>
+    <string name="str_recorder_will_cancel">手指上滑，取消发送</string>
+    <string name="str_recorder_time_short">录音时间过短</string>
+    <string name="voice_note">语音随记</string>
+    <string name="video_note">视频随记</string>
+    <string name="tip">为保证悬浮球正常使用，请将其加入系统清理白名单</string>
 </resources>

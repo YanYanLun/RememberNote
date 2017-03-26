@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="LemonHello4Android-1.0.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/494a8e3af392739eb6074352521c02d3f0a34afd/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/494a8e3af392739eb6074352521c02d3f0a34afd/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

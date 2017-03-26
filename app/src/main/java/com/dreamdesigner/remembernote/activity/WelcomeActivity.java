@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.dreamdesigner.library.Utils.AppOnForegroundUtils;
 import com.dreamdesigner.remembernote.R;
 import com.dreamdesigner.remembernote.application.NoteAppliction;
 import com.dreamdesigner.remembernote.dialog.WriteDialog;
@@ -142,5 +143,26 @@ public class WelcomeActivity extends AppCompatActivity {
             }
         }
         return language;
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        if (!AppOnForegroundUtils.isAppOnForeground(this)) {
+            //app 进入后台
+            //全局变量isActive = false 记录当前已经进入后台
+            Intent intent = new Intent();
+            intent.setAction("activity.isAppOnForeground");
+            sendBroadcast(intent);
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Intent intent = new Intent();
+        intent.setAction("activity.isAppUnForeground");
+        sendBroadcast(intent);
     }
 }

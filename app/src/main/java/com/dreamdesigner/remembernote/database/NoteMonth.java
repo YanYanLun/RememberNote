@@ -1,5 +1,7 @@
 package com.dreamdesigner.remembernote.database;
 
+import com.dreamdesigner.remembernote.models.Note;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;

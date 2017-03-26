@@ -1,5 +1,6 @@
 package com.dreamdesigner.library.BaseActivity;
 
+import android.content.Intent;
 import android.opengl.Visibility;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -17,6 +18,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.dreamdesigner.library.R;
+import com.dreamdesigner.library.Utils.AppOnForegroundUtils;
 import com.jaeger.library.StatusBarUtil;
 
 public abstract class NoWriteActivity extends AppCompatActivity {
@@ -89,5 +91,25 @@ public abstract class NoWriteActivity extends AppCompatActivity {
 
     private FloatingActionButton getFloatingActionButton() {
         return (FloatingActionButton) findViewById(R.id.fab);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (!AppOnForegroundUtils.isAppOnForeground(this)) {
+            //app 进入后台
+            //全局变量isActive = false 记录当前已经进入后台
+            Intent intent = new Intent();
+            intent.setAction("activity.isAppOnForeground");
+            sendBroadcast(intent);
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Intent intent = new Intent();
+        intent.setAction("activity.isAppUnForeground");
+        sendBroadcast(intent);
     }
 }

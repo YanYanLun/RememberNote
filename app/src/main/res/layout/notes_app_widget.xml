@@ -92,7 +92,8 @@
             android:layout_margin="@dimen/text_margin"
             android:scrollbarFadeDuration="1000"
             android:scrollbarStyle="outsideOverlay"
-            android:scrollbars="vertical" />
+            android:scrollbars="vertical"
+            android:divider="@null"/>
 
     </RelativeLayout>
 </RelativeLayout>

@@ -24,6 +24,9 @@
     <string name="action_refresh">Refresh</string>
     <string name="action_data_backup">Backup</string>
     <string name="action_data_reduction">Reduction</string>
+    <string name="action_creat_float_button">Floating ball</string>
+    <string name="action_audio_recorder">Recorder</string>
+    <string name="action_note_write">Words</string>
 
     <string name="English_App_Name">RememberNote</string>
     <string name="Chinese_App_Name">记随记</string>
@@ -48,10 +51,44 @@
     <string name="prompt_reduction_success">Notes reduction success！</string>
     <string name="prompt_reduction_fail">Notes reduction fail！</string>
     <string name="prompt_not_changed">Notes not changed!</string>
+    <string name="prompt_other_app_up">Please allow display on other applications</string>
+    <string name="prompt_access">Turn on the ball assist</string>
+    <string name="prompt_other_app_up_title">Display in application</string>
+    <string name="prompt_access_title">Auxiliary function</string>
+    <string name="prompt_update">Voice recording temporarily does not support changes</string>
+    <!--SettingActivity-->
+    <string name="prompt_storage_explain">Backup is required to use the cache and file storage operations, you need to grant the relevant storage permissions! \n click on the pop-up box to allow the button</string>
+    <string name="prompt_storage_explain2">You have denied permission and may cause an error in the application</string>
+    <string name="prompt_storage_explain3">Request permission</string>
+    <string name="prompt_storage_explain4">Lack of storage rights</string>
+    <string name="prompt_storage_explain5">RememberNote the lack of storage permissions, please set the interface authorization</string>
+    <string name="prompt_storage_explain6">You have denied permission and may cause an error in the application</string>
+    <string name="prompt_storage_explain7">No reminder</string>
+    <string name="prompt_storage_explain8">Will no longer remind the request for basic permissions, as soon as possible authorized</string>
+    <string name="prompt_storage_explain9">Setting</string>
+    <!--SettingActivity-->
+    <string name="prompt_audio_explain">Voice recording with the need to use the microphone recording operation, you need to grant the relevant recording rights! \n please click on the pop-up box to allow the button</string>
+    <string name="prompt_audio_explain2">You have denied permission and may cause an error in the application</string>
+    <string name="prompt_audio_explain3">Request permission</string>
+    <string name="prompt_audio_explain4">Lack of recording rights</string>
+    <string name="prompt_audio_explain5">RememberNote the lack of recording rights, please set the interface authorization</string>
+    <string name="prompt_audio_explain6">You have denied permission and may cause an error in the application</string>
+    <string name="prompt_audio_explain7">No reminder</string>
+    <string name="prompt_audio_explain8">Will no longer remind the request for basic permissions, as soon as possible authorized</string>
+    <string name="prompt_audio_explain9">Setting</string>
 
     <string-array name="action_items">
         <item name="action_add">Add</item>
         <item name="action_update">Update</item>
         <item name="action_delete">Delete</item>
     </string-array>
+
+    <string name="str_recorder_normal">Hold to talk</string>
+    <string name="str_recorder_recording">Loose end</string>
+    <string name="str_recorder_want_cancel">Release the finger</string>
+    <string name="str_recorder_will_cancel">Fingers on the slide, cancel send</string>
+    <string name="str_recorder_time_short">Recording time is too short</string>
+    <string name="voice_note">Voice RememberNote</string>
+    <string name="video_note">Video RememberNote</string>
+    <string name="tip">In order to ensure the normal use of suspended ball, please add it to clean up the system list</string>
 </resources>

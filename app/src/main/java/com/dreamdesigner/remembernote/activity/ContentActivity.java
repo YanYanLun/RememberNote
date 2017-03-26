@@ -2,12 +2,11 @@ package com.dreamdesigner.remembernote.activity;
 
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.View;
 import android.widget.TextView;
 
 import com.dreamdesigner.library.BaseActivity.NoCollapsingActivity;
 import com.dreamdesigner.remembernote.R;
-import com.dreamdesigner.remembernote.database.Note;
+import com.dreamdesigner.remembernote.models.Note;
 
 public class ContentActivity extends NoCollapsingActivity {
     private Note note;
@@ -35,10 +34,16 @@ public class ContentActivity extends NoCollapsingActivity {
         } else {
             getNoteText().setText(note.getContent());
         }
-
     }
 
     private TextView getNoteText() {
         return (TextView) findViewById(R.id.note_text);
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        finish();
     }
 }

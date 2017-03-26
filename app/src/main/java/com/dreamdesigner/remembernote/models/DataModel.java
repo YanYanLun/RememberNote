@@ -1,7 +1,5 @@
 package com.dreamdesigner.remembernote.models;
 
-import com.dreamdesigner.remembernote.database.Note;
-
 /**
  * Created by ishratkhan on 24/02/16.
  */

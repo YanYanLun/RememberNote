@@ -1,6 +1,7 @@
 package com.dreamdesigner.remembernote.database;
 
 import com.dreamdesigner.remembernote.application.NoteAppliction;
+import com.dreamdesigner.remembernote.models.Note;
 
 import java.util.ArrayList;
 import java.util.List;

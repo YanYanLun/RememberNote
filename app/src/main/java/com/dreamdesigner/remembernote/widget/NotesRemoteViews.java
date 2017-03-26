@@ -13,7 +13,7 @@ import android.widget.RemoteViews;
 
 import com.dreamdesigner.remembernote.R;
 import com.dreamdesigner.remembernote.application.NoteAppliction;
-import com.dreamdesigner.remembernote.database.Note;
+import com.dreamdesigner.remembernote.models.Note;
 import com.dreamdesigner.remembernote.database.NoteDao;
 import com.dreamdesigner.remembernote.utils.StaticValueUtils;
 
